@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 5</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+<body>
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №5. Оператор &nbsp;DO WHILE</font></h2>
+</center>
+
+<h3><font face="Verdana">Условие задачи</font></h3>
+
+<p>
+<font face="Verdana"><br>
+Написать программу, которая вводит с клавиатуры 5 дробных чисел и вычисляет их среднее арифметическое.
+<br>
+Вычисление среднего арифметического последовательности
+дробных чисел. После ввода каждого числа нажимайте Enter<br>
+
+-&gt; 5.4<br>
+
+-&gt; 7.8<br>
+
+-&gt; 3.0<br>
+
+-&gt; 1.5<br>
+
+-&gt; 2.3<br>
+
+Среднее арифметическое введенной последовательности: 4.00<br>
+
+Для завершения нажмите Enter
+
+</font></p>
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+<p>
+<font face="Verdana"><br>
+Для нахождения среднего арифметического вводимой с клавиатуры
+последовательности дробных чисел. После этого нужно сложить все
+введённые элементы последовательности, после чего разделить полученную
+сумму чисел на количество элементов последовательности. И вывести
+результат на экран.</font></p>
+
+
+<p></p>
+
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+<p>
+<font><font face="Verdana">Определяем переменную a, в которую будем помещать количество элементов
+последовательности. Также определяем переменную sum, в которую будем помещать сумму элементов последовательности. И
+ещё, определяем переменную i, которая будет
+служить счётчиком цикла.<br>
+
+Создаём цикл do while. Цикл будет просить ввести очередной элемент
+последовательности и прибавлять его к переменной sum, а также
+прибавлять к i еденицу. Если i &lt; a, цикл будет повторятся. Когда i
+&gt; a, цикл остановится, и на экран выведется результат от
+деления sum на a.</font></font></p>
+
+
+<h3><font face="Verdana">Блок-схема</font></h3>
+
+<p></p>
+
+<font face="Verdana"><img src="task_1_img_2.jpg">
+
+</font>
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+<span style="font-family: Verdana;"><span style="color: rgb(0, 0, 153); font-weight: bold;">#include</span> <span style="color: rgb(255, 0, 0);">&lt;iostream&gt;</span><br>
+<span style="color: rgb(0, 0, 153); font-weight: bold;">using namespace</span> std;<br>
+<br>
+<span style="color: rgb(0, 0, 153); font-weight: bold;">int</span> main()<br>
+{<br>
+&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 0, 153);"> <span style="font-weight: bold;">int</span></span> a;<span style="color: rgb(0, 153, 0);">// колличество чисел (a)</span><br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> </span><span style="color: rgb(0, 0, 153); font-weight: bold;">float</span> sum=0;<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;<span style="color: rgb(255, 0, 0);">" Wwedite kolli4estwo 4isel posledowatel'nosti: "</span>;<br>
+&nbsp;&nbsp;&nbsp; cin&gt;&gt;a;<br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;<span style="color: rgb(255, 0, 0);">" Wwedite posledowatel'nost'. Posle wwoda kaczdogo 4isla naczimaite &lt;Enter&gt;\n"</span>;<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;<span style="font-weight: bold;"> </span><span style="color: rgb(0, 0, 153); font-weight: bold;">int</span> i=0;<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 153); font-weight: bold;">do</span><br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 153); font-weight: bold;">float</span> x;<span style="color: rgb(0, 153, 0); font-style: italic;">//вводимое число (x)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cin&gt;&gt;x;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum = sum + x;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i++;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 153); font-weight: bold;">while</span>(i&lt;a);<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; cout&lt;&lt;<span style="color: rgb(255, 0, 0);">" Srednee arifmeti4eskoe wwedennoi posledowatel'nosti: "</span>&lt;&lt;sum/a&lt;&lt;endl;<br>
+&nbsp;&nbsp;&nbsp; system(<span style="color: rgb(255, 0, 0);">"pause"</span>);<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 153); font-weight: bold;">return</span> 0;<br>
+}<span style="font-weight: bold;"><br>
+</span></span><br>
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+<p><font face="Verdana"><i><i>Вычесление среднего арифметического последовательности ,состоящей из пяти членов, {5.4; 7.8; 3.0; 1.5; 2.3}.</i></i></font></p>
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+<p><font face="Verdana"><i><i>Вычесление среднего арифметического последовательности ,состоящей из шести членов, {10.9; 7.8; 1.1; 15.3; 6.6; 9.6}.</i></i></font></p>
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+<p><font face="Verdana"><i><i>Вычесление среднего арифметического последовательности ,состоящей из четырех членов, {0.8; 1.3; 36; 25}.</i></i></font></p>
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 11</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №11. Размешение двумерного массива в свободной памяти.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""></span></span></i><span style="" lang="BE">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; С </span>помощью
+генератора случайных чисел сформировать квадратную матрицу вещественных чисел
+размерности <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">m x m</span>, где
+значение <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">m &lt;=7</span>
+вводится с клавиатуры. Диапазон формируемых в матрице значений от <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">&ndash;8 до +1</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="BE">0</span>.
+Написать программу, в которой предусмотреть подсчет в каждой строке количества
+четных элементов и их сумму. В результате на экран вывести сформированную
+матрицу, значения количества и суммы элементов с номерами соответствующих строк.<span style="" lang="BE"> <o:p></o:p></span>
+
+<p class="MsoNormal" style="text-align: justify;"><span style="" lang="BE">П</span>одсчет в
+строке значения количества четных элементов и их сумму, оформить в виде функции.&nbsp;
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения &nbsp;поставленой задачи &nbsp;необходимо использовать ГСЧ и функцию ( <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font>).
+&nbsp;Сначала вводится число m размерностью не больше 7, далее
+производится проверка вода на корректность если ввод произведен не
+правильно то выводится сообщение об ошибке. Затем создаем массив в свободной и определяем ГСЧ ,
+при помощи двух циклов формируется матрица с значениями от -8 до 10.
+&nbsp;После чего сформированая матрица выводится на экран и
+создаем цикл при помощи которого ф-ия будет выполнятся по строчно в теле цикла подключается ф-ия ( <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font>), которая будет вычислять количество четных элементов и их сумму.<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; В этой ф-ии при помощи двух циклов выбираем некоторый элемент (<font size="-1"><span style="font-family: Courier New;">mass[i][j]</span></font>)
+который проверяется на четность. Если элемент четный то в новый массив
+в первый столбец записываем номер строки, во второй столбец записываем
+сумму четных элементов, а в третий столбец записываем количество четных
+элементов. Если же элемент не четный то поисходит проверка на то что а
+существуют ли в этой строке четные элементы, если нет то в первый
+столбец записываем номер строки, а в остальные столбцы записываем нули<br>
+&nbsp;&nbsp;&nbsp; В этой ф-ии определяем 2 переменные в которые будем
+записывать сумму и количество четных элиментов. Создаем цикл в теле
+которого будем проверять элимент на четность. Если элимент четный то к
+переменной kl добовляем еденицу т.к. эта переменая хранит количество
+четных элиментов, и к переменной sum добовляем четный элимент. после
+того как цикл выполнился в этих двух переменных хранятся необходимые
+нам значения. На экран мы выводим&nbsp;номер строки, в которой
+производились вычисления, и переменные хранящие сумму и количество
+четных элиментов в строке. <br>
+&nbsp;&nbsp;&nbsp; Далее после того как выполнился цикл, в главной ф-ии
+в котором происходило вычисления, то происходид удаление массива из
+свободной памяти.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;поставленой задачи &nbsp;подключить &nbsp;библиотеку <font style="color: rgb(0, 0, 0);" size="-1"><span style="font-family: Courier New;">&lt;time.h&gt;</span></font>&nbsp;необходимую
+для генирации случайного числа. Вглавной ф-ии выводим сообщение о том
+что необходимо ввести размерность массива, происходит проверка этого
+числа на коректность ввода. Если число удовлетворяет интервале от 0 до
+7 то программа выполняется далее, если нет то на экран выводится
+соодщение об ошибке. Далее определяем массив&nbsp;<font size="-1"><span style="font-family: Courier New;">mass </span></font>размерностью m на m в свободной памяти. Создаем вспомогательный массив указателей (<font size="-1"><span style="font-family: Courier New;">mass = <span style="color: rgb(51, 51, 255);">new int</span>*[m]</span></font>) после чего создается цикл (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i = 0; i&lt;m; i++)</span></font>)
+в теле которого формируем строки матрицы как одномерные массивы.
+&nbsp;Определяем ГСЧ и создаем цик в теле которого
+генерируем&nbsp;случайное число в отрезке от <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">&ndash;8 до +1</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="BE">0</span>
+и записываем его в массив под определенными номерами. Затем выводим
+сформулированый массив на экран при помощи 2 циклов for. Затем создаем
+еще один цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++)</span></font>)
+,который необходим для того чтобы на вход ф-ии подовался не весь
+массив, а только некотороя строка под определенным номером. Это сделано
+для удобства обработки массива. В теле цикла &nbsp;определяем
+переменную К и сохроним в нее номер строки которая "сейчас" выполняется
+(<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> k=i;</span></font>). еще определим ф-ию по вычислению количества и сумммы четных элиментов (<font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow (</span></font><font size="-1"><span style="font-family: Courier New;">k, m, mass [i]</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>)<font size="-1"><span style="font-family: Courier New;"></span></font>
+на вход этой ф-ии будем подовать номер строки котороя в данный момент
+вычисляется, количество столбцов в массиве и i-ою строку из массива.<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; В ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font> создадим две переменые (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> sum=0, kl=0</span></font>),
+предворительно занулив их это сделано на тот случай если в строке не
+окажется четных элементов тогда на экран выведутся нули. В переменную <font size="-1"><span style="font-family: Courier New;">sum</span></font> будем записывать сумму четных элиментов, а в переменную&nbsp;<font size="-1"><span style="font-family: Courier New;">kl</span></font>
+будем записывать количество четных элиментов. &nbsp;Далее определим
+цикл for () который будет вычислять номер столбца в i строке. В теле
+которого будет выполнятся условная конструкция if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (mass[i]%2==0)</span></font>) необходимую для проверки элемента на четность. Если элемент четный то к переменной&nbsp;<font size="-1"><span style="font-family: Courier New;">kl</span></font>(<font size="-1"><span style="font-family: Courier New;">kl++</span></font>) добавится еденица, а к переменной&nbsp;<font size="-1"><span style="font-family: Courier New;">sum</span></font> (<font size="-1"><span style="font-family: Courier New;">sum+=mass[i]</span></font>)
+непосредственно четный элимент. После того как цик выполнится то на
+экран выволится номер строки, сумма четных элиметнов, количество четных
+элиментов в этой строке.&nbsp; &nbsp; <br>
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; После того как в главной ф-ии выполнится цикл а соответственно и функция <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow </span></font>происходит
+удаление массива из свободной памяти, это происходит в обратном порядке
+как происходило создание. т.е. сначала определяется цик for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++)</span></font>) в котором удаляем строки массива (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">delete</span>[] mass[i]</span></font>), а затем и вспомогательный массив укозателей (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">delete</span> [] mass</span></font>).&nbsp; &nbsp; <span style="color: rgb(0, 0, 0);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; </span>&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"># include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+
+
+<span style="color: rgb(51, 51, 255);">
+# include</span> <span style="color: rgb(153, 0, 0);">&lt;stdio.h&gt;</span><br>
+
+
+<span style="color: rgb(51, 51, 255);">
+# include</span> <span style="color: rgb(153, 0, 0);">&lt;time.h&gt;</span><br>
+
+
+<span style="color: rgb(51, 51, 255);">
+using namespace</span> std;<br>
+
+
+
+<br>
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> koli4estwo_ilementow (<span style="color: rgb(51, 51, 255);">int</span> k, <span style="color: rgb(51, 51, 255);">int</span> m, <span style="color: rgb(51, 51, 255);">int</span> mass []) <span style="color: rgb(0, 102, 0);">// ф-ия по подсчету в каждой строке количества четных элиментов и их суммы</span></span></font><br>
+
+<font size="-1"><span style="font-family: Courier New;">
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> sum=0, kl=0;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (mass[i]%2==0) <span style="color: rgb(0, 102, 0);">// проверка элимента массива на четность</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kl++; <span style="color: rgb(0, 102, 0);">// подсчет количества четных элиментов</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum+=mass[i]; <span style="color: rgb(0, 102, 0);">вычисление суммы</span> <br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// вывод номера строки, суммы четных элиментов, количество четных элиментов</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" ____________________________________"</span> &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" "</span>&lt;&lt; k+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">" строка"</span> &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сумма четных элементов в строке:"</span> &lt;&lt; sum &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Количество четных элементов: "</span> &lt;&lt; kl &lt;&lt; endl;<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+<span style="color: rgb(51, 51, 255);">
+int</span> main()<br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> int</span> m=0;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите размерность массива, не более 7: "</span>; <span style="color: rgb(0, 102, 0);">// ввод размерности массива</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; m;<br>
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (m&lt;0 || m&gt;7) <span style="color: rgb(0, 102, 0);">// провека на корректность ввода</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Размерность введена не правильно !!!!"</span> &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return </span>1;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// создание массива в свободной памяти</span><br>
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> ** mass;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; mass = <span style="color: rgb(51, 51, 255);">new int</span>*[m];<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i = 0; i&lt;m; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mass[i] = <span style="color: rgb(51, 51, 255);">new int</span>[m];<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+&nbsp;&nbsp;&nbsp; srand (( <span style="color: rgb(51, 51, 255);">unsigned </span>) time(NULL)); <span style="color: rgb(0, 102, 0);">// определение ГСЧ</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;m; j++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mass[i][j]=rand()%19-8; <span style="color: rgb(0, 102, 0);">// запись произвольного числа</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Изначальный массив:"</span> &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// вывод сформулированого при помощи ГСЧ массива</span><br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;m; j++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp;&nbsp;&nbsp; "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++) <span style="color: rgb(0, 102, 0);">// выполнение ф-ии построчно</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> k=i;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; koli4estwo_ilementow (k, m, mass [i]); <span style="color: rgb(0, 102, 0);">// включение&nbsp;</span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">ф-иb по подсчету в каждой строке количества четных элиментов и их суммы</span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);"></span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<span style="color: rgb(0, 102, 0);"></span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// удаление массива из свободной памяти<br>
+
+<br>
+
+</span>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;m; i++) <br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">delete</span>[] mass[i];<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">delete</span> [] mass;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+
+
+
+}<br>
+
+
+
+</span></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1170px;"><font face="Verdana"><i><i>При вводе размерности массива равному 3.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе размерности массива равному 6</i></i></font><font face="Verdana"><i><i>.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе размерности массива равному 2</i></i></font><font face="Verdana"><i><i>.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

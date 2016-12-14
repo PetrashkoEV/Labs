@@ -1,0 +1,1218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 16</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+
+
+
+
+<h2><font face="Verdana">Лабораторное задание №16.&nbsp;Класс для обработки&nbsp;целочисленного массива.</font><b><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></b></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"></span></i><span style="font-size: 14pt; line-height: 115%;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Написать
+программу, в которой предусмотреть класс для организации обработки
+целочисленного массива. Внутри класса реализовать два конструктора: 1&ndash;й
+конструктор должен обеспечивать ввод элементов массива с клавиатуры; 2&mdash;й
+конструктор должен формировать значения элементов массива в задаваемом
+диапазоне [</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">min</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">,
+</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">max</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">]
+с помощью генератора случайных значений. Внутри класса предусмотреть следующие
+методы:<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вывод массива на экран;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">упорядочить элементы массива по убыванию
+модулей элементов;<o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вычисление значения<span style="">&nbsp; </span>минимального по модулю элемента;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вывод номера(номеров) минимального по
+модую элемента;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вывод всех элементов, расположенных
+после первого минимального по модулю элемента</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">.<o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><span style="font-size: 14pt; line-height: 115%;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+&nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;задачи нам
+необходим класс с именем&nbsp;<font size="-1"><span style="font-family: Courier New;">obrabotka</span></font>
+в нем определим 6 ф-ий и 2 явных конструктора 1 конструктор для ввода
+чисел в массив с клавиатуры 2 для ввода элементов при помощи ГСЗ. В
+классе будут предусмотрены ф-ии для: вывода сформированого массива на
+экран, " взятие" массива по модулю сортировка массива по убыванию
+элементов вывод минимального элемента в массиве, вывод номера (номеров)
+минимального по модулю элементов, вывод всех элементов, расположеных
+после первого минимального по модулю элемента. Все эти ф-ии и
+конструкторы определены как&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">public</span></span></font>, их описание будет далее, а в&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">private</span></span></font> определеим целочисленный массив с 9 элементами.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; В главной ф-ии выведем сообщение о том
+чтонеобходимо ввести размер массива. Далее на экран выведем сообщение
+что далее массив дудет формированся вводом чисел с клавиатуры. После
+чего определим класс, где сработает 1 явный конструктор. выведем
+сообщение о том что сейчас на экран будет выведен сформированый массив
+и ф-ей выведем его на экран. После чего сработают следуюobt методы:
+метод для&nbsp;" взятие" массива по модулю, метод для сортировка
+массива по убыванию элементов, метод по
+выводу минимального элемента в массиве, метод по&nbsp;выводу номера
+(номеров)
+минимального по модулю элементов, метод по&nbsp;выводу всех элементов,
+расположеных
+после первого минимального по модулю элемента. После того как это
+выполнится выведется сообщение о том что сейчас произойдет формирование
+массива при помощи ГСЗ и попросим ввести пользователя минимальное и
+максимальное значение элементов. А далее произойдет тоже самое что и
+для ввода чисел с клавиатуры.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;1 явный конструктор предназначен
+для ввода чисел с клавиатуры. Определим цикл, а в теле этого цикла
+выведем сообщение для ввода i-го элемента.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;2 явный конструктор предназначен
+для формирования произвольного числа в заданом промежутке. В теле этой
+ф-ии необщодимо определить ГСЗ, а уже затем циклов присвоить i-ому
+элементу некоторое сгенерированое число.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;В ф-ии предусматривающей
+реализацию метода для вывода массива на экран, произойдет следующее.
+Определим в цикл, а уже в нем произойдет вывод i-го элемента.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; В ф-ии предусматривающей
+реализацию метода по "взятию" массива по модулю. В ней бедет определен
+цикл в котором определим условную конструкцию if для проверки элемента
+на отрицательность. т.е. если i-ый элемент отрицательный то он
+домножается на -1. т.е. весь массив берется по модулю.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; В ф-ии&nbsp; предусматривающей
+реализацию метода для сортировки массива по убыванию. Сортировка
+массива произойдет по методу пузырька, который уже несколько раз
+подробно описывался в других программах (например в 12 в ф-ии <font size="-1"><span style="font-family: Courier New;">sorting</span></font>) и на этом методе мы не будем останавливатся.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;В ф-ии предусматривающей
+реализацию метода по выводу минимального элемента в массиве. т.к.
+массив уже был отсортирован, в предыдущей ф-ии, по убыванию элементов
+то минимальным элементом является первый элемент. то на мы на экран
+выведем сообщение о том что минимальным по модулю элементом в массиве
+является первый элемент массива.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; В ф-ии&nbsp;предусматривающей
+реализацию метода по выводу ноамера (номеров) минимального по модулю
+элемента. В ней выведем сообщение о том что сейчас будут выведены
+номера минимальных по модулю элементов и выведем 1. т.к. ранее уже
+говорилось что массив уже отсортирован и минимальным элементом в нем
+является первый элемент массива по этому и выводим 1. Но если в массиве
+существует несколько одинаковых минимальных по модулю элемента на этот
+случай мы определим некоторую переменную и присвоим ей значение 1
+элемента (т.е. минимального в массиве) и определим цикл. В теле этого
+цикла произойдет проверка а есть ли в этом массиве еще одинаковые
+минимальные жлементы. Если есть то на экран выведем номер элемента.
+через запятую.<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; В ф-ии &nbsp;предусматривающей
+реализацию метода по выводу всех &nbsp;элементов, расположеных после
+первого минимального по модулю элемента. выводим сообщение о том что
+сейчас произойдет вывод элементов полсе 1-го минимального по модулю
+элемента и определим цикл начинающийся с 1, а не с 0. т.к. необходимо
+вывести элементы после 1-го минимального элемента, а мы уже не раз
+упоминали что 1 элемент массива яв минимальным. По этому мы и начинаем
+вывод массива с 1, а не с 0. В теле цикла выводим i-ый элемент массива.
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;
+
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;">
+
+
+
+</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+
+<span style="color: rgb(51, 51, 255);">#include</span><span style="color: rgb(153, 0, 0);"> &lt;time.h&gt;</span><br>
+
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">class</span> obrabotka <br>
+
+{<br>
+
+<span style="color: rgb(51, 51, 255);">public:</span><br>
+
+&nbsp;&nbsp;&nbsp; obrabotka (<span style="color: rgb(51, 51, 255);">int</span> n); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// явный конструктор для ввода элементов с клавиатуры</span></span></font><br>
+
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> output_mass (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> module (<span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// "взятие" массива по модулю</span> <br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> sorting (<span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// сортировка массива по убыванию</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> min_elem () <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// вывод минимального элемента в массиве</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> nomer_min_elem (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// вывод номера(номеров) минимального по модую элемента</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> output_min (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// вывод всех элементов, расположенных после первого минимального по модулю элемента.</span><br>
+
+&nbsp;&nbsp;&nbsp; obrabotka (<span style="color: rgb(51, 51, 255);">int</span> min, <span style="color: rgb(51, 51, 255);">int</span> max, <span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// явный конструктор для ввода элементов в массив при помощи ГСЧ </span><br>
+
+<span style="color: rgb(51, 51, 255);">private:</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> mass[10];<br>
+
+};<br>
+
+<br>
+
+obrabotka::obrabotka (<span style="color: rgb(51, 51, 255);">int</span> n) </span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// явный конструктор для ввода элементов с клавиатуры</span></span></font><br>
+
+<font size="-1"><span style="font-family: Courier New;">{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите "</span> &lt;&lt; i+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">"-элемент: "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cin &gt;&gt; mass[i];<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+}<br>
+
+<br>
+
+obrabotka::obrabotka(<span style="color: rgb(51, 51, 255);">int</span> min, <span style="color: rgb(51, 51, 255);">int</span> max, <span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// явный конструктор для ввода элементов в массив при помощи ГСЗ</span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; srand (( <span style="color: rgb(51, 51, 255);">unsigned</span> ) time(NULL)); <span style="color: rgb(0, 102, 0);">// определение ГСЗ</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; mass[i]=rand()%(max-min+1)+min; <span style="color: rgb(0, 102, 0);">// формирование числа</span><br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void</span> obrabotka::output_mass (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span> <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">' '</span>;<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i] &lt;&lt; <span style="color: rgb(153, 0, 0);">" || "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl &lt;&lt; endl;<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void </span>obrabotka::module (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// "взятие" массива по модулю&nbsp; </span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (mass[i]&lt;0)<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; mass[i]=-mass[i];<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void</span> obrabotka::sorting (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// сортировка массива по убыванию</span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// сортировка массива по методу "пузырька"</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n-1; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> j=i+1; j&lt;n; j++)<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> if</span> (mass[i]&gt;=mass[j])<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> u=mass[i];<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; mass[i]=mass[j];<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; mass[j]=u;<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void</span> obrabotka::min_elem () const <span style="color: rgb(0, 102, 0);">// вывод минимального элемента в массиве</span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Минимальным по модулю элементом в массиве является: "</span> &lt;&lt; mass[0] &lt;&lt; endl;<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void</span> obrabotka::nomer_min_elem (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const </span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// вывод номера(номеров) минимального по модую элемента</span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"></span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> k=mass[0];<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt;<span style="color: rgb(153, 0, 0);"> " Номера минимальных по модулю элементов: 1"</span>;<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=1; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (k==mass[i])<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">','</span> &lt;&lt; i+1;<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">void</span> obrabotka::output_min (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span> <span style="color: rgb(0, 102, 0);">// вывод всех элементов, расположенных после первого минимального по модулю элемента.</span><br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Ввывод всех элементов после 1-го минимального по модулю элемента: "</span> &lt;&lt; endl;<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">' '</span>;<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int </span>i=1; i&lt;n; i++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i] &lt;&lt; <span style="color: rgb(153, 0, 0);">" || "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+}<br>
+
+<br>
+
+<span style="color: rgb(51, 51, 255);">int</span> main ()<br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int </span>n;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите размер массива: "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; n;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Формирование массива вводом элементов с клавиатуры: "</span> &lt;&lt; endl;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; obrabotka O1 (n); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// определение класса</span></span></font><br>
+
+<font size="-1"><span style="font-family: Courier New;"><br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Ввывод массива сформированого вводом элементов с клавиатуры: "</span> &lt;&lt; endl;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; O1.output_mass (n); <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+&nbsp;&nbsp;&nbsp; O1.module (n); <span style="color: rgb(0, 102, 0);">// "взятие" массива по модулю </span><br>
+
+&nbsp;&nbsp;&nbsp; O1.sorting (n); <span style="color: rgb(0, 102, 0);">// сортировка массива по убыванию.</span><br>
+
+&nbsp;&nbsp;&nbsp; O1.min_elem (); <span style="color: rgb(0, 102, 0);">// вывод минимального элемента в массиве</span><br>
+
+&nbsp;&nbsp;&nbsp; O1.output_mass (n); <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+&nbsp;&nbsp;&nbsp; O1.nomer_min_elem (n); <span style="color: rgb(0, 102, 0);">// вывод номера(номеров) минимального по модую элемента</span><br>
+
+&nbsp;&nbsp;&nbsp; O1.output_min (n); <span style="color: rgb(0, 102, 0);">// вывод всех элементов, расположенных после первого минимального по модулю элемента. </span><br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> min, max;<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Формирование массива при помощи ГСЗ: "</span> &lt;&lt; endl;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите min: "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; min;<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите max: "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; max;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Диапазон чисел ["</span> &lt;&lt; min &lt;&lt;<span style="color: rgb(153, 0, 0);"> ", "</span> &lt;&lt; max &lt;&lt; <span style="color: rgb(153, 0, 0);">"]"</span> &lt;&lt; endl;<br>
+
+&nbsp;&nbsp;&nbsp; <br>
+
+&nbsp;&nbsp;&nbsp; obrabotka O2 (min, max, n); <span style="color: rgb(0, 102, 0);">// определение класса</span><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Ввывод массива сформированого при помощи ГСЗ: "</span> &lt;&lt; endl;<br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; O2.output_mass (n); <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+&nbsp;&nbsp;&nbsp; O2.module (n); <span style="color: rgb(0, 102, 0);">// "взятие" массива по модулю </span><br>
+
+&nbsp;&nbsp;&nbsp; O2.sorting (n); <span style="color: rgb(0, 102, 0);">// сортировка массива по убыванию.</span><br>
+
+&nbsp;&nbsp;&nbsp; O2.min_elem (); <span style="color: rgb(0, 102, 0);">// вывод минимального элемента в массиве</span><br>
+
+&nbsp;&nbsp;&nbsp; O2.output_mass (n); <span style="color: rgb(0, 102, 0);">// вывод сформированого массива</span><br>
+
+&nbsp;&nbsp;&nbsp; O2.nomer_min_elem (n); <span style="color: rgb(0, 102, 0);">// вывод номера(номеров) минимального по модую элемента</span><br>
+
+&nbsp;&nbsp;&nbsp; O2.output_min (n); <span style="color: rgb(0, 102, 0);">// вывод всех элементов, расположенных после первого минимального по модулю элемента. </span><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+
+}<br>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+</span></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1195px;"><font face="Verdana"><i><i>При вводе размерности массива 6; При вводе элементов: 1, 65, -56, 4, 1, 6. И значении min=-56 и max=56<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

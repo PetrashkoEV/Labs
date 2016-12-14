@@ -1,0 +1,2394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 8</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №8. Одномерные массивы.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span></i>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">В
+одномерном массиве, состоящем из </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">
+вещественных элементов, вычислить:<o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1) номер
+максимального по модулю элемента массива;<o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2) сумму
+элементов массива, расположенных после первого положительного<o:p></o:p> элемента.<o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" style="text-align: justify; width: 1204px;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Преобразовать
+массив таким образом, чтобы сначала располагались все элементы,<o:p></o:p> целая
+часть которых лежит в интервале [а,</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">b</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">], а потом &mdash; все остальные.&nbsp;<o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения этой задачи объявим пятидестиэлементный
+масив "z" вещественных чисел z[1], z[2] ... . Далее вводим количество
+эллементов массива и проверяем это число удовлетворяет ли оно
+промежутку от 1 до 50. Затем при помощи цикла вводим элементы массива.<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Задание №1 <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Затем при помощи <span style="color: rgb(0, 0, 0);">цикла &nbsp;определяем максимальный элемент масссива и определяем его номер. <br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Задание №2<br>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; а) При помощи цикла и двух инструкций if вычисляем
+сумму чисел после первого положительного элемента массива. <br>
+
+
+
+
+
+
+
+
+
+
+Заттем на экран выводим :<br>
+
+
+
+
+
+
+
+
+
+
+1) Номер максимального по модулю элемента массива<br>
+
+
+
+
+
+
+
+
+
+
+2)&nbsp;Сумму элементов массива,
+расположенных после первого положительного элемента </span><br>
+
+
+
+
+
+
+
+
+
+
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; б) &nbsp;Вводим интервал </span>[a,b] и проверяем эти числа на коректность ввода. <span style="color: rgb(0, 0, 0);">При помощи циклов выводим на экран массив таким образом, чтобы сначала располагались все
+элементы,
+
+</span><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);">целая часть которых лежит в интервале [а,b], а потом &mdash; все остальные.</span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Для решения этой задачи объявим пятидестиэлементный
+масив "z" вещественных чисел z[1], z[2] ... . Далее вводим количество
+эллементов массива и проверяем это число удовлетворяет ли оно
+промежутку от 1 до 50. Затем при помощи цикла вводим элементы массива.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+Задание №1:<span style="color: rgb(51, 51, 255);"><br>
+
+
+
+
+
+
+
+
+
+
+
+
+</span>&nbsp;&nbsp;&nbsp; Объявляем переменные<span style="color: rgb(51, 51, 255);"></span> <span style="color: rgb(0, 0, 0); font-weight: bold;">maxp=z[1]</span>, в нее будем помещать максимальное положительное число, <span style="font-weight: bold;">c=0</span> , в этой переменной будет хранится предварительный номер максимального элемента , <span style="font-weight: bold;">maxo=z[1]</span>, здесь будет хранится макимальное отрицательное число, <span style="font-weight: bold;">w=0</span>, &nbsp;а в этой переменной будет хранится предварительный номер максимального отрицательного элемента, <span style="font-weight: bold;">max=0</span>, в нее будем помещать максимально по модулю число, <span style="font-weight: bold;">nomer=0</span>, а сюда будет помещатся номер максимального по модулю элемента.<span style="color: rgb(51, 51, 255);"></span>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Далее при помощи цикла for будем определять
+максимальное число и его
+номер. В цикле будем использовать инструкцию выбора if. В котором
+определим положительный элемент массива. Затем при помоши еще одной
+инструкции if определим максилальный положительный элемент массива
+(maxp=z[j]) и его номер в массиве (c=j).<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; А&nbsp;в инструкции else отрицательный элемент
+массива. Затем при помоши еще одной инструкции&nbsp;if &nbsp;оприделим
+максимальный по модулю отрицательный элемент массива ( maxo=(-1)*z[j] )
+и его номер в этом массиве ( w=j ).<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Затем в том же цикле при помощи еще одной инструкции
+if ( maxp&gt;=maxo ) определим какой из двух чисел, максимального
+положительного элемента массива и максималоного по модулю
+отрицательного элемента массива, выберем какой из них больший и
+присвоим большему элементу имя "<big>max</big>" , и присвоим номеру максимального элемента имя <big>nomer</big>.<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);"></span> Задание №2<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 0, 0);">При помощи цикла for вычисляем сумму чисел после первого положительного элемента массива. <br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; В цикле используем инструкцию if </span>(z[p]&gt;=0)
+которая определяет положительный элемент и вычисляет сумму элементов
+после первого положитнльного числа ( sum+=z[p] ). Затем&nbsp; в теле
+инструкции&nbsp; else при помощи еще одной инструкции if (sum!=0), где
+sum - это переменная в которой накапливается значение суммы после
+первого положительного элемента, где вычисляем сумму элементов (sum
++=z[p]). Это было сделано для того чтобы сумма элементов массива
+прибовляла к переменной sum еще и отрицательные числа.<br>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Выводим на экран 1) Номер максимального по модулю
+элемента массива и 2) Сумма элементов массива, расположенных после
+первого положительного элемента.<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Основное задание:<br>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; Выводим на экран сообщение о том, что нужно ввести
+интеввал [a,b].&nbsp;. Затем при помощи циклов выводим на экран массив
+таким образом, чтобы сначала располагались все элементы, целая часть
+которых лежит в интервале [а,b], а потом &mdash; все остальные. Это будет вычислятся при помощи 2 циклов for и 2 инструкций if.<br>
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; В первом цикле <span style="color: rgb(0, 0, 0);">for (int i=1; i&lt;=n; i++) в котором&nbsp;</span> заводим переменную х и присваиваем ей округленую, в меньшую сторону, целую часть.<span style="color: rgb(0, 0, 0);"> Инструкция </span>if
+((х&lt;=b) &amp;&amp; (х&gt;=a) ). Предназначеная для проверки
+целой части элемента (z[i]) на принадлежность отрезку [a,b]. Если целая часть элемента входит в
+промежуток то этот элемент выводится на экран. Во втором цикле  <span style="color: rgb(0, 0, 0);">for (int i=1; i&lt;=n; i++) в котором&nbsp;</span>заводим переменную х и присваиваем ей округленую, в меньшую сторону, целую часть.<span style="color: rgb(0, 0, 0);"> </span><span style="color: rgb(0, 0, 0);">Инструкция if</span> ( х&gt;b || х&lt;a ). Предназначеная для проверки целой части элемента (z[i]) на не&nbsp; принадлежность отрезку
+[a,b]. Если целая часть элемента&nbsp;не входит в этот промежуток то&nbsp;элемент выводится на
+экран. <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; Таким образом выводится массив в котором элементы
+расположены: сначало выводятся элементы целая часть которой пренадлежащит промежутку, а
+потом все остальные.<br style="color: rgb(0, 0, 0);">
+
+
+
+
+
+
+
+
+
+
+
+<span style="color: rgb(0, 0, 0);"></span>
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<small><span style="color: rgb(51, 51, 255); font-family: Courier New;">#include</span><span style="font-family: Courier New;"> </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">&lt;iostream&gt;</span><br style="font-family: Courier New;">
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">#include</span><span style="font-family: Courier New;"> </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">&lt;math.h&gt;</span><br style="font-family: Courier New;">
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">using namespace</span><span style="font-family: Courier New;"> std;</span><br style="font-family: Courier New;">
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> main ()</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+{</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> n;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">double</span><span style="font-family: Courier New;"> z[50]; </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// заводим массив</span><span style="font-family: Courier New;"> </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">" Введите колличество элементов массива: "</span><span style="font-family: Courier New;">;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; n;</span><br style="font-family: Courier New;">
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">&nbsp;&nbsp;&nbsp; if</span><span style="font-family: Courier New;"> (n&gt;50 || n&lt;1)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">" Количество элементов массива введено не правильно. Количество элементов масива не должно быть БОЛЬШЕ 50 !!!!!!!!!!! "</span><span style="font-family: Courier New;"> &lt;&lt; endl; 
+
+
+
+
+
+
+</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; system (</span><span style="color: rgb(153, 0, 0); font-family: Courier New;">"pause"</span><span style="font-family: Courier New;">);</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">&nbsp;&nbsp;&nbsp; return</span><span style="font-family: Courier New;"> 1; &nbsp;&nbsp; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"></span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">" Введите элементы массива "</span><span style="font-family: Courier New;"> &lt;&lt; endl;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> i;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> i=1; i&lt;=n; i++)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; " </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">Введите a ["</span><span style="font-family: Courier New;">&lt;&lt; i &lt;&lt;</span><span style="color: rgb(153, 0, 0); font-family: Courier New;">"]="</span><span style="font-family: Courier New;">; &nbsp;</span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// Вводим элементы массива</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cin &gt;&gt; z[i]; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+<br style="font-family: Courier New;">
+</span><span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// задание №1<br>
+<br style="font-family: Courier New;">
+</span><span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> c=0, w=0;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">double &nbsp;<span style="color: rgb(0, 0, 0);">max=0, nomer=0, maxp=z[1], maxo=z[1];</span></span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> j=1; j&lt;=n; j++) </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// при помощи цикла &nbsp;определяем максимальный элемент масссива и определяем его номер</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> ( z[j]&gt;=0)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> (maxp&lt;=z[j])</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxp=z[j];</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=j;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">else </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> (maxo&gt;=z[j])</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxo=(-1)*z[j];</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w=j;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> (maxp&gt;=maxo)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; max=maxp;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nomer=c;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">else </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; max=maxo;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nomer=w;&nbsp; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+<br style="font-family: Courier New;">
+</span><span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// Заднае №2<br>
+<br style="font-family: Courier New;">
+</span><span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">double</span><span style="font-family: Courier New;"> sum=0;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp; &nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> per=0;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> p=1; p&lt;=n; p++) </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// при помощи цикла вычисляем сумму чисел после первого положительного элемента массива</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> (z[p]&gt;=0 &amp;&amp; per&gt;0)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum+=z[p];</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> else if</span><span style="font-family: Courier New;"> (z[p]&gt;=0)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; per++;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">else</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> (sum!=0)</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum +=z[p]; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">" 1) Номер максимального по модулю элемента массива = "</span><span style="font-family: Courier New;"> &lt;&lt; nomer &lt;&lt; endl; </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// выводим на экран номер максимального по модулю элемента массива</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">" 2) Сумма элементов массива,
+расположенных после первого положительного элемента равна "</span><span style="font-family: Courier New;">&lt;&lt; sum
+&lt;&lt; endl; </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">&nbsp;// выводим на экран сумму элементов массива,
+расположенных после первого положительного элемента<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; // основное задание<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</span><span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">&nbsp;double</span><span style="font-family: Courier New;"> a=0, b=0;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt;&nbsp;</span><span style="color: rgb(153, 0, 0); font-family: Courier New;"> " Введите интервал [а,b], через пробел "</span><span style="font-family: Courier New;">; // </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">вводим интервал [a,b]</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; a &gt;&gt; b;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;</span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// при помощи циклов выводим на экран массив таким образом, чтобы сначала располагались все
+элементы,
+
+</span><span style="font-size: 12pt; color: rgb(0, 102, 0); font-family: Courier New;">целая часть которых лежит в интервале [а,b], а потом &mdash; все остальные.</span><br style="color: rgb(0, 102, 0); font-family: Courier New;">
+<span style="color: rgb(0, 102, 0); font-family: Courier New;">
+</span><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> i=1; i&lt;=n; i++) </span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// цикл для вычисления значениия i</span><span style="font-family: Courier New;">.</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">&nbsp;float</span><span style="font-family: Courier New;"> x=trunc(z[i]); &nbsp;&nbsp; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> ((x&lt;=b) &amp;&amp; (x&gt;=a) )</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; z[i] &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">"&nbsp;&nbsp;&nbsp; "</span><span style="font-family: Courier New;">;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (int i=1; i&lt;=n; i++) &nbsp;</span><span style="color: rgb(0, 102, 0); font-family: Courier New;">// цикл для вычисления значениия i</span><span style="font-family: Courier New;">.</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">float</span><span style="font-family: Courier New;"> x=trunc(z[i]);&nbsp; </span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if</span><span style="font-family: Courier New;"> ( x&gt;b || x&lt;a )</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; z[i] &lt;&lt; </span><span style="color: rgb(153, 0, 0); font-family: Courier New;">"&nbsp;&nbsp;&nbsp; "</span><span style="font-family: Courier New;">;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">return</span><span style="font-family: Courier New;"> 0;</span><br style="font-family: Courier New;">
+<span style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+}</span><br>
+</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Verdana;"><span style="color: rgb(0, 0, 153); font-weight: bold;"></span></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1170px;"><font face="Verdana"><i><i>При вводе массива состоящем из 6 элементов: 3.6, 5.3, -12.003, 6.9, 56, -9.&nbsp; И инетервале от -10 до 3.3.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе массива состоящем из 3 элементов: -100.9, 5, 56.1.&nbsp; И инетервале от 6.45 до 10.001.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе массива состоящем из 9 элементов: 2.3, 3, -1, -54.3, -5.96, 65, 6, 2, 3.&nbsp; И инетервале от -3.1 до 6.0001.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 4</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana"><i><i>При вводе массива состоящем из 6 элементов: 2.1, 5, -10,&nbsp;56.36,&nbsp;5, 6.&nbsp; И инетервале от 0.001 до 5.96.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font>
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_04.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 5</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana"><i><i>При вводе массива состоящем из -15 элементов.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже<br>
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font>
+
+<font face="Verdana"><i><i> </i></i></font>
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_05.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

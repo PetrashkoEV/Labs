@@ -1,0 +1,983 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 10</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №10. Массив строк.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""></span></span></i><span style="" lang="BE">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</span><span style="" lang="BE"></span><span style="" lang="BE"></span><span style="font-size: 11pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Написать
+программу, в которой с клавиатуры вводится до 10 символьных строк. Вывести
+строки, в которых есть четные цифры. В каждой строке удалить все четные цифры.
+Нахождение и удаление символов оформить в виде функций</span><span style="font-size: 11pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;">. </span>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения
+&nbsp;поставленой задачи в главной ф-ии определим двумерный массив,
+размером 10х100. На экран выведем сообщение о том что необходимо ввести
+количество строк. Затем определим ф-ии: ф-ия для ввода строк, ф-ия для
+поиска и вывода четных элементов в строке, ф-ия для нахожденя и
+удаления четных цифр в строке, вывод измененного массива. Эти ф-ии удут
+описаны далее.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии для ввода строк определим цикл для вычисления номера строки в которую будут записыватся элименты.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии по поиску и выводу строк в которых есть
+четные элименты мы определим "флаг" и присвоим ему значение false.
+&nbsp;Его опишим чуть поздней. Определим цик в теле которого определим
+еще один цикл, а уже в теле этого цикла определим условную конструкцию,
+котороя проверяет элимент строки яв ли он цифрой. Если он является
+цифрой то в нутри этой конструкции определим условную конструкцию
+котороя непосредственно будет проверять числовой элимент на четность.
+Если он четный, то в теле условной конструкции определим еще одну
+условную конструкцию. которая проверяет состояне "флага". Если флагу
+присвоено значение false то на экран выводим сообщение о том что что
+сейчас произойдет вывод строк в которых есть четные элименты. Далее
+непосредственно поизойдет вывод строки в которой есть четные элименты.
+Присвоение флагу значение true. Для того чтобы не выводилось каждый раз
+сообщение о том что сейчас произойдет вывод строк в которых есть четные
+элименты. Затем выполнится команда break необходимая для выхода из 2
+цикла, который вычисляет номер столбца некоторой строки. Это сделано
+для того чтобы каждый раз не выводилась одна и та же строке если в этой
+строке несколько четных элиментов.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии по нахождению и удалению четных
+элиментов из строки. В нутри этой строки определим также 2 цикла. 1
+цикл вычисляет номер строки, а 2 цикл вычисляет номер столбца некоторой
+строки. В теле этого цикла также произойдет проверка, а является ли
+элимент строки цифрой. Если элимент является цифрой то произойдет
+проверка этого элимента на четность. А теле этой условной конструкции
+определим еще один цикл, необходимый для "затирания" четного элимента.
+А уже в теле этого цикла произойдет смещение элементов массива на один
+влево. Для "затирания" четного элимента. Это смещение начнется не с
+начала строки а с того элемента который является четным.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии, по выводу отсортированого массива,
+определим цикл для вычисления номера строки которую будем выводить.
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;поставленой задачи &nbsp;в главной ф-ии определим двумерный массив&nbsp;<font size="-1"><span style="font-family: Courier New;">str (</span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">char</span> str [10][100]</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>. Далеее на экран выведем сообщение о том что необходимо ввести количество сток. Затем определим ф-ии: ф-ия для ввода строк (<font size="-1"><span style="font-family: Courier New;">input_str (n, str)</span></font>), ф-ия для поиска и вывода
+четных элементов в строке (<font size="-1"><span style="font-family: Courier New;">search_even (n, str)</span></font>), ф-ия для нахожденя и удаления четных цифр в
+строке (<font size="-1"><span style="font-family: Courier New;">del_even (n, str)</span></font>), вывод измененного массива (<font size="-1"><span style="font-family: Courier New;">output_str (n, str)</span></font>), на вход они получают количество строк и собственно двумерный массив. Эти ф-ии удут описаны далее.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">input_str</span></font>, необходимой для ввода строк, опредеим чикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span></font>), для вычисления номера строки в которую будут записыватся элименты.<br>
+
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">search_even</span></font>, необходимой&nbsp;для поиска и вывода
+строк в которых есть четные элемены, определяем флаг и присваеваем ему значение false (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">bool</span> flag=<span style="color: rgb(51, 51, 255);">false</span></span></font>), его значение будет описано поздней. После чего определяем цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span></font>), для вычисления некоторого номера строки, и еще один цикл (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; str[i][j]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; j++)</span></font>), для вычисления номара столбца некоторой строки. В теле этого цикла определим условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (str[i][j]&gt;=<span style="color: rgb(153, 0, 0);">'1'</span> &amp;&amp; str[i][j]&lt;=<span style="color: rgb(153, 0, 0);">'9'</span>)</span></font>)для проверки элемента, а не является ли он цифрой. Если является то определим еще одну условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (str [i][j]%2==0)<span style="color: rgb(0, 102, 0);"></span></span></font>) для проверки числового элимента на четность. Если элимент четный то определим еще &nbsp;одну условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (flag==<span style="color: rgb(51, 51, 255);">false</span>)</span></font>),
+необходимой для вывода на экран сообщение о том что сейчас произойдет
+вывод строк в которых есть четные элименты. Далее непосредственно
+произойдет вывод строки и присвоение "флагу" значение true (<font size="-1"><span style="font-family: Courier New;">flag=<span style="color: rgb(51, 51, 255);">true</span></span></font>),
+для того чтобы сообщение, описаное в предыдущей условной конструкции,
+не выводилась несколько раз. Далее выполнится комманда break,
+необходимой для выхода из 2 цикла (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; str[i][j]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; j++)</span></font>) это сделано для того чтобы одна строка не выводилась несколько раз на тот случай если в строке несколько четных элиментов.<br>
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии <font size="-1"><span style="font-family: Courier New;">del_even</span></font>, необходимой для для нахожденя и удаления четных цифр в
+строке, Начало этой ф-ии одинаковое что и в ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">search_even</span></font>. Различие происходит лишь в том что во 2 условной конструкции if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (str [i][j]%2==0)</span></font>), где происходит проверка на четность. В теле этой конструкции определяем еще один цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> l=j; str[i][l]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; l++)</span></font>)&nbsp;необходимый для "затирания" четного элимента. А уже в теле этого цикла произойдет смещение элементов массива на один
+влево (<font size="-1"><span style="font-family: Courier New;">str[i][l]=str[i][l+1]</span></font>). Для "затирания" четного элимента. Это смещение начнется не с
+начала строки а с того элемента который является четным.<br>
+
+&nbsp;&nbsp;&nbsp; В теле ф-ии <font size="-1"><span style="font-family: Courier New;">output_str</span></font>, предназначенной для вывода отсортированого массива, определяем цикл for (<font size="-1"><span style="font-family: Courier New;">for (int i=0; i&lt;n; i++)</span></font>)&nbsp; для вычисления номера строки которую будем выводить. <span style="color: rgb(0, 0, 0);"></span><span style="color: rgb(0, 0, 0);"></span>&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+
+
+
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> input_str (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">char</span> str [][100]) <span style="color: rgb(0, 102, 0);">// ввод строк</span><br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++) <br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите "</span> &lt;&lt; i+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">"-строку: "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cin &gt;&gt; str [i];<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> search_even (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">char</span> str [][100]) <span style="color: rgb(0, 102, 0);">// поиск и вывод четных элементов в строке</span><br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">bool</span> flag=<span style="color: rgb(51, 51, 255);">false</span>; <span style="color: rgb(0, 102, 0);">// определение флага</span> <br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; str[i][j]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; j++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (str[i][j]&gt;=<span style="color: rgb(153, 0, 0);">'1'</span> &amp;&amp; str[i][j]&lt;=<span style="color: rgb(153, 0, 0);">'9'</span>) <span style="color: rgb(0, 102, 0);">// нахождение цифр в строке </span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (str [i][j]%2==0)<span style="color: rgb(0, 102, 0);">// проверка на четность цифры в строке</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (flag==<span style="color: rgb(51, 51, 255);">false</span>) <span style="color: rgb(0, 102, 0);">// вывод сообщения о том что в строках есть четные элементы</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt;
+endl &lt;&lt; <span style="color: rgb(153, 0, 0);">" Вывод строк в которых есть четные элементы: "</span> &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; str [i] &lt;&lt;
+endl; <span style="color: rgb(0, 102, 0);">// вывод строк в которых есть четные элементы </span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; flag=<span style="color: rgb(51, 51, 255);">true</span>; <span style="color: rgb(0, 102, 0);">// присвоение флагу знач true&nbsp;чтобы каждый&nbsp; раз не выдовалось сообщение о том что в в строках есть четные элементы</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">break</span>;<span style="color: rgb(0, 102, 0);">// неообходимо для того что бы одну строчку не выводило несколько раз на тот случай если в строке несколько четных элементов</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (flag==<span style="color: rgb(51, 51, 255);">false</span>) <span style="color: rgb(0, 102, 0);">// вывод сообщения о том что в строках нет четных элементов</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Четных цифр в строках нет !!!"</span> &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> del_even (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">char</span> str [][100]) <span style="color: rgb(0, 102, 0);">// нахождение и удаление четных цифр в строке</span><br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++) <span style="color: rgb(0, 102, 0);">// цикл для вычисления индекса строки</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; str[i][j]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; j++) <span style="color: rgb(0, 102, 0);">// цикл для вычисления индекса столбца</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (str[i][j]&gt;=<span style="color: rgb(153, 0, 0);">'1'</span> &amp;&amp; str[i][j]&lt;=<span style="color: rgb(153, 0, 0);">'9'</span>) <span style="color: rgb(0, 102, 0);">// нахождение цифр в строке</span> <br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (str [i][j]%2==0)<span style="color: rgb(0, 102, 0);">// проверка на четность цифры в строке</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> l=j; str[i][l]!=<span style="color: rgb(153, 0, 0);">'\0'</span>; l++) <span style="color: rgb(0, 102, 0);">// цикл для того чтобы удалить четное число из строки</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+str[i][l]=str[i][l+1]; <span style="color: rgb(0, 102, 0);">// смешение элементов на одну позицию назад для удаления четного числа из строки</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; j--;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> output_str (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">char</span> str [][100]) <span style="color: rgb(0, 102, 0);">// вывод строк</span> <br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; i+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">"-строка: "</span> &lt;&lt; str [i] &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// вывод строк</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">int</span> main ()<br>
+
+
+
+{<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">char</span> str [10][100];<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> n;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите количество строк: "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; n;<br>
+
+
+<br>
+
+
+&nbsp;&nbsp;&nbsp; input_str (n, str); <span style="color: rgb(0, 102, 0);">// ввод строк</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; search_even (n, str); <span style="color: rgb(0, 102, 0);">// поиск и вывод четных элементов в строке</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; del_even (n, str); <span style="color: rgb(0, 102, 0);">// нахождение и удаление четных цифр в строке</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; output_str (n, str); <span style="color: rgb(0, 102, 0);">// вывод строк</span><br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+
+
+
+}</span><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);"></span></span><span style="font-family: Courier New;"></span></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1170px;"><font face="Verdana"><i><i>При вводе количества строк:6. И после ввода:</i></i></font></p>
+<p style="width: 1170px;"><font face="Verdana"><i><i>1) строки - студент. 2) строки - 8ford2. 3) строки - 8m2icrosoft3. 4)&nbsp;</i></i></font><font face="Verdana"><i><i>строки -</i></i></font><font face="Verdana"><i><i> 65. 5) </i></i></font><font face="Verdana"><i><i>строки -</i></i></font><font face="Verdana"><i><i>qwerty. 6) </i></i></font><font face="Verdana"><i><i>строки -</i></i></font><font face="Verdana"><i><i>3.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+<font face="Verdana"><i><i>При вводе количества строк:3. И после ввода:<br>
+<br>
+1)строки - а44ппе2льсин6. 2) строки - 8ман4дарин. 3) строки - 2. </i></i></font>
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+<br>
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

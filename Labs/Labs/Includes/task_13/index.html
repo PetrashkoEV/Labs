@@ -1,0 +1,890 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 13</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №13. Реализация класса.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"></span></i><span style="font-size: 14pt; line-height: 115%;"></span>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; width: 1202px;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&nbsp;&nbsp;&nbsp; Описать класс с
+именем ORDER, содержащий следующие закрытые переменные &ndash; члены класса (поля): <o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">расчетный счет плательщика; <o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">расчетный счет получателя; <o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">перечисляемая сумма в руб. <o:p></o:p></span></p>
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 17.85pt; text-align: justify;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Написать программу, выполняющую ввод и
+вывод полей <span style="">&nbsp;</span>объекта </span><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">O</span></b><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">
+</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">класса
+ORDER.<o:p></o:p></span></p>
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><span style="font-size: 14pt; line-height: 115%;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения &nbsp;поставленой задачи нам необходим класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span> (данным по условию). Этот класс содержит ф-ии типа public:&nbsp; <font size="-1"><span style="font-family: Courier New;">vvod_info </span></font>- эта ф-ия необходима для ввода информаци с клавиатуры в поля класса типа private, и ф-ию&nbsp;<font size="-1"><span style="font-family: Courier New;">vuvod_info -</span></font>
+&nbsp;эта ф-ия выводит поля закрытого типа класса. Определяем класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span>, определяем ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">vvod_info и </span></font><font size="-1"><span style="font-family: Courier New;">vuvod_info</span></font><font size="-1"><span style="font-family: Courier New;"></span></font>. Эти ф-ии будут описыватся далее.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">vvod_info</span></font>эта
+ф-ия необходима для ввода информаци с клавиатуры в поля класса типа
+private. В теле этой ф-ии будем записывать значения
+(счет плательщика, счет получателя, сумму снятую со счета) в переменные
+класса, закрытого типа.<br>
+
+&nbsp;&nbsp;&nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">vuvod_info</span></font>эта
+ф-ия выводит поля закрытого типа класса. Выводим счет получателя, счет
+плательщика, сумму снятую со счета.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;задачи нам
+необходим  класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span> (данным по условию). В этом классе будут размещены поля открытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">public</span></span></font>) и закрытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">private</span></span></font>) типа&nbsp;. &nbsp;В открытом типе размещены ф-ии: <font size="-1"><span style="font-family: Courier New;">vvod_info (),&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">vuvod_info ()</span></font><font size="-1"><span style="font-family: Courier New;">.</span></font>&nbsp;
+Эти ф-ии обеспечивают ввод и вывод значений (счет плательщика, счет
+получателя, сумма) соответственно. В закрытом типе будут размешены
+элементы&nbsp;<font size="-1"><span style="font-family: Courier New;">payer</span></font>, эта переменная сохроняющая счет плательщика, <font size="-1"><span style="font-family: Courier New;">adres</span></font>, эта переменная сохроняющая счет получателя, <font size="-1"><span style="font-family: Courier New;">sum,</span></font> эта переменная сохроняющая сумму снятую со счета. <br>
+
+&nbsp;&nbsp;&nbsp; В главной ф-ии определяем класс&nbsp;<font size="-1"><span style="font-family: Courier New;">order</span></font> (<font size="-1"><span style="font-family: Courier New;">order o</span></font>), определяем ф-ию&nbsp;<font size="-1"><span style="font-family: Courier New;">vvod_info (</span></font><font size="-1"><span style="font-family: Courier New;">o.vvod_info ()</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>, определяем ф-ию&nbsp;<font size="-1"><span style="font-family: Courier New;">vuvod_info (</span></font><font size="-1"><span style="font-family: Courier New;">o.vuvod_info ()</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>. Эти ф-ии будут далее рассмотрены подробно.<br>
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">vvod_info</span></font> предназначена для ввода с клаватуры значений: счет плательщика, счет получателя, сумму.&nbsp;<font size="-1"><span style="font-family: Courier New;"></span></font> Выводим на экран сообщения о вводе пользователем: счет плательщика,
+счет получателя, сумму и сохроняем эти значения в переменные <font size="-1"><span style="font-family: Courier New;">payer, </span></font><font size="-1"><span style="font-family: Courier New;">adres,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">sum</span></font><font size="-1"><span style="font-family: Courier New;">&nbsp;</span></font> соответственно.<br>
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">vuvod_info</span></font> предназначеа для вывода введеной информации с клавиатуры. В теле ф-ии выводм переменные&nbsp;<font size="-1"><span style="font-family: Courier New;">payer, </span></font><font size="-1"><span style="font-family: Courier New;">adres,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">sum</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font>, которые вводились в предедущей ф-ии.&nbsp;<span style="color: rgb(0, 0, 0);"></span><span style="color: rgb(0, 0, 0);"></span>&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);"></span></span>&nbsp;<span style="font-family: Courier New;"></span><span style="font-family: Courier New;"></span><br style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+
+
+
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">class</span> order<br>
+
+
+
+{<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">public:</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> vvod_info (); <span style="color: rgb(0, 102, 0);">// ф-ия для ввода информации с клавиатуры</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> vuvod_info (); <span style="color: rgb(0, 102, 0);">// ф-ия для вывода информации</span><br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">private:</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> payer; <span style="color: rgb(0, 102, 0);">// переменная хронящая счет плательшика</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> adres; <span style="color: rgb(0, 102, 0);">// переменная хронящая счет получателя</span><br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> sum; <span style="color: rgb(0, 102, 0);">// переменная хронящая сумму</span><br>
+
+
+
+};<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> order::vvod_info(</span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"></span></span></font><font size="-1"><span style="font-family: Courier New;">) <span style="color: rgb(0, 102, 0);">// ф-ия для ввода информации с клавиатуры</span><br>
+
+
+
+{<span style="color: rgb(51, 51, 255);"></span><br>
+&nbsp; &nbsp; cout &lt;&lt; endl;<br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет плательщика:</span><span style="color: rgb(153, 0, 0);"> "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; payer&nbsp;;<br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет получателя:</span><span style="color: rgb(153, 0, 0);"> "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; adres;<br>
+
+
+
+<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите сумму:</span><span style="color: rgb(153, 0, 0);"> "</span>;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cin &gt;&gt; sum;<br>
+
+
+
+}<br>
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">void</span> order::vuvod_info (</span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"></span></span></font><font size="-1"><span style="font-family: Courier New;">) <span style="color: rgb(0, 102, 0);">// ф-ия для вывода информации</span><br>
+
+
+
+{<br>
+&nbsp; &nbsp; cout &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет плательщика:</span><span style="color: rgb(153, 0, 0);">"</span> &lt;&lt; payer &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет получателя:</span><span style="color: rgb(153, 0, 0);">"</span> &lt;&lt; adres &lt;&lt; endl;<br>
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сумма:</span><span style="color: rgb(153, 0, 0);">"</span> &lt;&lt; sum &lt;&lt; endl;<br>
+
+
+
+}<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">int</span> main()<br>
+
+
+
+{</span></font><font size="-1"><span style="font-family: Courier New;"><br>
+
+
+
+</span></font><font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; order o;<br>
+
+
+
+&nbsp;&nbsp;&nbsp; o.vvod_info (); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// ф-ия для ввода информации с клавиатуры</span></span></font><br>
+
+
+
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; o.vuvod_info (); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// ф-ия для вывода информации</span></span></font><br>
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><br>
+
+
+
+&nbsp;&nbsp;&nbsp; system(<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+
+
+
+}<span style="color: rgb(51, 51, 255);"></span></span><span style="font-family: Courier New;"></span></font><br>
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1195px;"><font face="Verdana"><i><i>При вводе счета плательщика 5456;
+счете получателя 546; перечисляемой суммы 45;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

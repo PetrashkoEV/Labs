@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  <title>Петрашко Евгения Викторовича студента - 1 курс 6 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 1</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+<body>
+
+<font face="Verdana">
+<center>
+<h2>Лабараторное задание №1. Условный оператор if</h2>
+</center>
+
+<h3>Условие задачи</h3>
+</font><font face="Verdana">
+<p>Дана точка на плоскости с координатами (х, у). Составить программу,
+которая выдает одно из сообщений "Да", "Нет", "На границе" в
+зависимости от того, лежит ли точка внутри заштрихованной области, вне
+заштрихованной области или на ее границе.
+</p>
+
+<img src="task_1_img_1.jpg">
+<h3>Математическая модель</h3>
+
+<p>Уравнения, определяющие, что точка с координатами (X,Y) принадлежит
+заштрихованной области: x&gt;2 и x&lt;8, и y&gt;3, и y&lt;5; x&gt;-5, и
+x&lt;-3, и y&gt;-11, и y&lt;-1.<br>
+
+Не принадлежит заштрихованной области:  x&lt;2 или x&gt;8, или y&lt;3, или y&gt;5; x&lt;-5 или x&gt;-3 или y&lt;-11 или y&gt;-1.<br>
+
+В противном случае лежит на границе.
+
+</p>
+
+
+<h3>Описание алгоритма</h3>
+
+<p>
+Для ввода точки с координатами (X,Y) описываются две переменные x и y вещественного типа float.<br>
+После ввода двух переменных x и y проверяется условие принадлежности
+точки к заштрихованной области выше и провее оси Ох, либо к
+заштрихованой области ниже и левее оси Ох.<br>
+После этого проверяется условие принадлежности точки заштрихованной
+области, и если это условие верно, то выводится сообщение &laquo;To4ka
+prenadleczit granice&raquo;.<br>
+В противном случае, если это условие не верно, то проверяется условие
+расположения точки вне заштрихованной области, и если это условие
+верно, то выводится сообщение &laquo;To4ka ne prinadleczit
+granice&raquo;.<br>
+
+В противном случае выводится сообщение &laquo;To4ka leczit na granice&raquo; 
+</p>
+
+
+<h3>Блок-схема</h3>
+
+<p></p>
+
+<img src="task_1_img_2.jpg">
+
+<h3>Текст программы с комментариями</h3>
+
+<p>
+
+<font color="#009900">#include &lt;iostream&gt;</font><br>
+
+<b>using namespace</b> std;<br>
+<br>
+
+
+<font color="#0033ff"><b>int</b></font> main()<br>
+
+{</p>
+<ul>
+
+	<font color="#0033ff"><b>float</b></font> x,y; <font color="#0066ff"><i>//Определяем переменные</i></font><br>
+
+	cout&lt;&lt;<font color="#cc0000">" Wwedite zna4enie  X=";</font><br>
+
+    cin&gt;&gt;x; <font color="#0066ff"><i>//Вводим значение X</i></font><br>
+
+    cout&lt;&lt;<font color="#cc0000">" Wwedite zna4enie  Y=";</font><br>
+
+    cin&gt;&gt;y; <font color="#0066ff"><i>//Вводим значение Y</i></font><br>
+  <br>
+
+	
+	<b>if</b>(y&gt;0) <font color="#0066ff"><i>//Условие определяющее область</i></font><br>
+
+	{
+  <ul>
+    <br>
+
+           
+		   <b>if</b>(x&gt;2 &amp;&amp; x&lt;8 &amp;&amp; y&gt;3 &amp;&amp; y&lt;5) <font color="#0066ff"><i>//Условие определяющее, входит ли точка в заштрихованую область</i></font><br>
+
+           {
+    <ul>
+
+                  cout&lt;&lt;<font color="#cc0000">" To4ka prenadleczit granice \n";</font>
+    </ul>
+
+           }<br>
+
+           <b>else if</b>(x&lt;2 || x&gt;8 || y&lt;3 || y&gt;5)<br>
+
+           {
+    <ul>
+
+                cout&lt;&lt;<font color="#cc0000">" To4ka ne prinadleczit granice \n";</font>
+    </ul>
+
+           }<br>
+
+
+           <b>else</b>
+
+    <br>
+
+           
+           {
+    <ul>
+
+                cout&lt;&lt;<font color="#cc0000">" To4ka leczit na granice \n";</font>
+    </ul>
+
+           }<br>
+  </ul>
+
+	
+	      }<br>
+
+           <b>else</b>
+  <br>
+
+           {
+  <ul>
+
+       
+	   <b>if</b>(x&gt;-5 &amp;&amp; x&lt;-3 &amp;&amp; y&gt;-11 &amp;&amp; y&lt;-1) <font color="#0066ff"><i>//Условие определяющее, входит ли точка в заштрихованую область</i></font><br>
+
+       {
+    <ul>
+
+              cout&lt;&lt;<font color="#cc0000">" To4ka prenadleczin granice \n";</font>
+    </ul>
+
+       }<br>
+
+       <b>else if</b>(x&lt;-5 || x&gt;-3 || y&lt;-11 || y&gt;-1)<br>
+
+       {
+    <ul>
+
+            cout&lt;&lt;<font color="#cc0000">" To4ka ne prinadleczit granice \n";</font>
+    </ul>
+
+       }<br>
+
+       <b>else</b>
+    <br>
+
+       {
+    <ul>
+
+            cout&lt;&lt;<font color="#cc0000">" To4ka leczit na granice \n";</font>
+    </ul>
+
+       }<br>
+  </ul>
+
+	}<br>
+  <br>
+
+ 	                      
+	system(<font color="#cc0000">"pause");</font><br>
+
+	<b>return</b> 0; <br>
+
+</ul>
+}<br>
+
+
+<p></p>
+
+<p>
+Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</p>
+
+
+<h3>Тесты и анализ результатов</h3>
+
+<h4>Тест 1</h4>
+
+<p>Точка принадлежит заштрихованной области</p>
+
+<p>Результат работы программы представлен на рисунке ниже</p>
+
+<center><img src="task_1_img_01.jpg"></center>
+
+
+<h4>Тест 2</h4>
+
+<p>Точка не принадлежит заштрихованной области</p>
+
+<p>Результат работы программы представлен на рисунке ниже</p>
+
+<center> <img src="task_1_img_02.jpg"></center>
+
+
+<h4>Тест 3</h4>
+
+<p>Точка лежит на границе заштрихованной области</p>
+
+<p>Результат работы программы представлен на рисунке ниже</p>
+
+<center> <img src="task_1_img_03.jpg"></center>
+
+
+</font>
+</body>
+</html>

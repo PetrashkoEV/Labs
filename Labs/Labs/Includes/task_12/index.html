@@ -1,0 +1,1577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 12</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №12. Массив структур.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"></span></i><span style="font-size: 14pt; line-height: 115%;">Описать
+структуру с именем ORDER, содержащую следующие поля: <o:p></o:p></span>
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">расчетный счет плательщика; <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">расчетный счет получателя; <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">перечисляемая сумма в руб. <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 17.85pt; text-align: justify;"><span style="font-size: 14pt; line-height: 115%;">Написать программу, выполняющую
+следующие действия: <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">ввод с клавиатуры данных в массив,
+состоящий из <b style="">k</b> &lt;=10 элементов
+типа ORDER; <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">записи должны быть размещены в
+алфавитном порядке по расчетным счетам плательщиков; <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">вывод па экран информации о сумме,
+снятой с расчетного счета плательщика, введенного с клавиатуры; <o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%;"><span style="">&middot;<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 14pt; line-height: 115%;">если такого расчетного счета нет, выдать
+на экран соответствующее сообщение.</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения &nbsp;поставленой задачи нам будет необходима структура <font size="-1"><span style="font-family: Courier New;">order</span></font>&nbsp;состоящая
+из переменнай хронящай: счет плательщика, счет получателя и
+перечисляемая сумма. В главной ф-ии main выведем сообщение о вводе
+количества счетов, определим структуру состоящую из 10 полей
+(подструктур). Определим ф-ии обеспечивающие ввод вывод информации,
+сортировку массива и вывод отсортированого массива на экран. Вводим
+&nbsp;номер счета получателя который необходимо найти в структуре и
+вывести сумму снятую со счета. Далее подробнее рассмотрим каждую из
+ф-ий.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия обеспечивающая ввод информации. В этой ф-ии
+определяем цикл и вводим с клавиатуры запрашиваемые поля. т.е. Счет
+плательщика, счет получателя и перечисляемую сумму.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия обеспечивающая сортировку массива. Сортировку
+массива будем проводить по методу "пузырька". т.е. определяем 2 цикла
+предназначеные для вычисления индексов. Во вложеном цикле определяем
+инструкцию if &nbsp;проверям какой из элементов больше. Если i счет
+плательщика &gt; j счета плательщика (i=0, j=i+1, i++, j++) то элементы
+с индексом i нужно поменять местами с j. Для этого зоводим переменную,
+которой присваиваем значение i-ых элементов структуры. После чего i-му
+элементу структуры присваиваем j-ый элемент структуры и j-му элементу
+структуры присваеваем значение переменной в которой хронится значение
+i-го элемента структуры. Если&nbsp;же i&lt;j то ничего не выполняется.
+В этом и заключается метод "пузырька".<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия обеспечивающая вывод сформулированой структуры
+в алфовитном порядке по расчетным счетам плательщика. Эта ф-ия выводит
+на экран сформулированую структуру в алфовитном порядке. <br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия находящая счет, введенного с клавиатуры, в
+структуре и выводит снятую сумму с расчетного счета лательшика на
+экран. Определяем флаг и задаем ему значение false, он пригодится для
+вывода сообщения если введеного счета в структурк не существует. Далее
+определяем цикл, который будет вычислять индекс расчетного счета
+плательщика. При помоши инструкции if сравниваем i-ый расчетный счет
+плательшика со &nbsp;счетом введеного с клавиатуры. Если счет совподает
+то на экран выводим значение суммы снятой с расчетного счета
+плательщика и флагу присваеваем значение true. Затем при помощи
+инструкции if проверяем чему равен флаг. Если он равен false то на
+экран выводится сообщение о том что такого счета не существет. Если же
+флаг НЕ равен значению false (т.е. true) то на экран ничего не
+выводится.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;задачи нам необходима структура <font size="-1"><span style="font-family: Courier New;">order</span></font> с переменными в нутри структуры&nbsp;<font size="-1"><span style="font-family: Courier New;">payer</span></font> (переменная хронящая счет плательщика),&nbsp;<font size="-1"><span style="font-family: Courier New;">addressee</span></font> (переменная хронящая счет получателя),&nbsp;<font size="-1"><span style="font-family: Courier New;">sum</span></font> (переменная хронящая сумму снятую с расчетного счета плательщика). Затем в главной ф-ии <font size="-1"><span style="font-family: Courier New;">main</span></font> запрашиваем ввод переменной n, которая хранит количество ордеров. Определяем структуру <font size="-1"><span style="font-family: Courier New;">order </span></font>(<font size="-1"><span style="font-family: Courier New;">order orders[10]</span></font>), в этой программе она будет использоватся на подобии массива. &nbsp;Определяем ф-ию <font size="-1"><span style="font-family: Courier New;">input_info (orders, n) </span></font>&nbsp;на
+вход в которую будем передовать доступ к структуре и количество
+ордеров, эта ф-ия будет осуществлять ввод информации о счетах.
+Определяем ф-ию <font size="-1"><span style="font-family: Courier New;">sorting(orders, n)</span></font>&nbsp;на
+вход в которую будем передовать доступ к структуре и количество
+ордеров, эта ф-ия будет осуществлять сортировку структуры в алфовитном
+порядке по расчетным счетам плательщика. Заводим ф-ию <font size="-1"><span style="font-family: Courier New;">output_info (orders, n) </span></font>&nbsp;на
+вход в которую будем передовать доступ к структуре и количество
+ордеров, эта ф-ия будет осуществлять вывод отсортированой структуры в
+аловитном порядке по расчетным счетам плательщика. &nbsp;Далее мы
+подробнее рассмотрим ф-ии.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">input_info (order orders[], <span style="color: rgb(51, 51, 255);">int</span> n),</span></font>&nbsp;которая на вход получила доступ к структуре и количество ордеров. При помощи цикла&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span></font> заносим данные в структуру под определенным индексом i. т.е. вводим <font size="-1"><span style="font-family: Courier New;">orders[i].payer</span></font> -счет плательщика, <font size="-1"><span style="font-family: Courier New;">orders[i].addressee</span></font> - счет получателя, <font size="-1"><span style="font-family: Courier New;">orders[i].sum</span></font> - перечисляемую сумму.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">sorting (order orders[], <span style="color: rgb(51, 51, 255);">int</span> n)</span></font><font size="-1"><span style="font-family: Courier New;">,</span></font>&nbsp;которая
+на вход получила доступ к структуре и количество ордеров, которая
+сортирует структуру в алфовитном порядке по расчетным счетам
+плательщиков. При помощи двух циклов&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n-1; i++)</span></font> и&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n-1; i++)</span></font> будем формироввать индексы элементов (индекс <span style="font-weight: bold;">первого</span> элемента на один больше чем <span style="font-weight: bold;">второй</span> индекс). Условной конструкцией&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (orders[i].payer&gt;orders[j].payer)</span></font>
+проверяем какой из элементов структуры (расчетные счета плательщиков).
+Если первыи счет больше второго то пользуясь методом "пузырька"
+сортируем масссив, этот метод был описан в математической модели. По
+этому заводим переменную <font size="-1"><span style="font-family: Courier New;">o=orders[i]</span></font>,&nbsp; <font size="-1"><span style="font-family: Courier New;">orders[i]=orders[j]</span></font> (т.е. первому элементу присваиваем значение второго элемента структуры, или расчетный счет плательщика) &nbsp;и&nbsp;<font size="-1"><span style="font-family: Courier New;">orders[j]=o</span></font>
+(т.е. второй элемент равен первому элементу массива или счету
+плательщика). Входе этих операций мы получили отсортированый массив в
+алфовитном порядке по расчетным счетам плательщика.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">output_info (order orders [], <span style="color: rgb(51, 51, 255);">int</span> n)</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">,</span></font>&nbsp;которая на вход получила доступ к структуре и количество ордеров. Эта ф-ия, при помощи цикла <font size="-1"><span style="font-family: Courier New;"> <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++),</span></font> выводит отсортированую структуру в алфовитном порядке по расчетным счетам плательщика. т.е. выводятся <font size="-1"><span style="font-family: Courier New;">orders[i].payer,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">orders[i].addressee</span></font><font size="-1"><span style="font-family: Courier New;">,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">orders[i].sum</span></font><font size="-1"><span style="font-family: Courier New;"> </span></font>счет плательшика, получателя и сумму снятой со счета.<br>
+
+
+&nbsp;&nbsp;&nbsp; В главной ф-ии (ф-ии &nbsp;main) просим пользователя
+&nbsp;ввести расчетный счет плательщика. т.е. заводим переменную&nbsp;<font size="-1"><span style="font-family: Courier New;">s4et</span></font> и помещаем туда значение введеное пользователем. &nbsp;Затем определяем ф-ию&nbsp;<font size="-1"><span style="font-family: Courier New;">search_s4et (orders, n, s4et)</span></font> предназначеную для нахождения введеного числа в структуре.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>
+
+
+&nbsp;&nbsp;&nbsp; Выполняется ф-ия <font size="-1"><span style="font-family: Courier New;">search_s4et (<span style="color: rgb(51, 51, 255);">order</span> orders [], <span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">int</span> s4et)</span></font>,
+на вход эта ф-ия получает доступ к структуре, количество ордеров и
+число которое ввел пользователь для нахождение его в структуре, по
+поиску этого числа в расчетных счетах плательщиков. В нутри этой ф-ии
+определяем переменную <font size="-1"><span style="font-family: Courier New;">flag </span></font>(<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">bool</span> flag=<span style="color: rgb(51, 51, 255);">false</span></span></font>) и присваеваем ей значение false. Он пригодится для
+вывода сообщения если введеного счета в структуре не существует. В нутри цикла <font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span></font>&nbsp; определяем инструкцию&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (orders[i].payer==s4et)</span></font>
+которая сравнивает все счета плательшиков ,из структуры, с введеным
+ползователем числом. Если это число равно какому либо счету
+плательщика&nbsp; из структуры то на экран выводится сумма снятая с
+этого числа (т.е.&nbsp;<font size="-1"><span style="font-family: Courier New;">orders[i].sum</span></font> ) и значению <font size="-1"><span style="font-family: Courier New;">flag<span style="color: rgb(51, 51, 255);"></span></span></font> присвоется значение <font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">true</span></span></font> (<font size="-1"><span style="font-family: Courier New;"> т.е. flag=<span style="color: rgb(51, 51, 255);">true</span></span></font>). После выполнения этого цикла задается еще одна инструкция <font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (flag==<span style="color: rgb(51, 51, 255);">false</span>)</span></font>, в которой проверяется значение<font size="-1"><span style="font-family: Courier New;"> flag.</span></font>&nbsp;
+Если он равен false то на
+экран выводится сообщение о том что такого счета не существет. Если же
+флаг НЕ равен значению false (т.е. true) то на экран ничего не
+выводится.&nbsp; =) &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 0);"></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; </span>&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);"></span></span>
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">&nbsp;#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">&nbsp;using namespace</span> std;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;<span style="color: rgb(51, 51, 255);">struct</span> order </span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> payer; <span style="color: rgb(0, 102, 0);">// переменная хронящая счет плательшика</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> addressee; <span style="color: rgb(0, 102, 0);">// переменная хронящая счет получателя</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> sum; <span style="color: rgb(0, 102, 0);">// переменная хронящая сумму</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;};</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;<span style="color: rgb(51, 51, 255);">void</span> input_info (order orders[], <span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// ф-ия определяющая ввод информации</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет плательщика: "</span>; <span style="color: rgb(0, 102, 0);">// ввод номера счета плательщика</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cin &gt;&gt; orders[i].payer;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет получателя: "</span>; <span style="color: rgb(0, 102, 0);">// ввод номера счета получателю&nbsp; </span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cin &gt;&gt; orders[i].addressee; </span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите перечисляемую сумму: "</span>; <span style="color: rgb(0, 102, 0);">// ввод перечисляемой суммы</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cin &gt;&gt; orders[i].sum;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;}</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;<span style="color: rgb(51, 51, 255);">void</span> sorting (order orders[], <span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// ф-ия обеспечивающая сортировку массивов</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n-1; i++)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=i+1; j&lt;n; j++)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (orders[i].payer&gt;orders[j].payer)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; order o=orders[i];</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; orders[i]=orders[j];</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; orders[j]=o;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;}</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">void</span> output_info (order orders [], <span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// ф-ия определяющая вывод информации</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color: rgb(0, 102, 0);">// вывод информации</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет плательщика: "</span> &lt;&lt; orders[i].payer &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет получателя: "</span> &lt;&lt; orders[i].addressee &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Снятая сума: "</span> &lt;&lt; orders[i].sum &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">}</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">void</span> search_s4et (<span style="color: rgb(51, 51, 255);">order</span> orders [], <span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">int</span> s4et)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">bool</span> flag=<span style="color: rgb(51, 51, 255);">false</span>;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (orders[i].payer==s4et)</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сумма снятая со счета ("</span> &lt;&lt; s4et &lt;&lt;<span style="color: rgb(153, 0, 0);"> ") равна: "</span> &lt;&lt; orders[i].sum &lt;&lt; endl;<br>
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+</span><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; flag=<span style="color: rgb(51, 51, 255);">true</span>; <span style="color: rgb(0, 102, 0);">// если flag=false то введеный счет существует и не будет выдаваться сообщение об ошибке</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (flag==<span style="color: rgb(51, 51, 255);">false</span>) <span style="color: rgb(0, 102, 0);">// если flag=false то введеного счета не существует </span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Такого счета не существует. "</span> &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">}</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> main ()</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">{</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> n;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите количество ордеров: "</span>; <span style="color: rgb(0, 102, 0);">//ввод количиства ордеров</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cin &gt;&gt; n;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; order orders[10];</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; input_info (orders, n); <span style="color: rgb(0, 102, 0);">// ф-ия определяющая ввод информации</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; sorting(orders, n); <span style="color: rgb(0, 102, 0);">// ф-ия обеспечивающая сортировку массивов</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; output_info (orders, n); <span style="color: rgb(0, 102, 0);">// ф-ия определяющая вывод информации</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; </span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> s4et; <span style="color: rgb(0, 102, 0);">// переменная хронящая искомый счет плательщика</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет плательщика: "</span>;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cin &gt;&gt; s4et;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; search_s4et (orders, n, s4et); <span style="color: rgb(0, 102, 0);">// поиск счета , веденного с клавиатуры, в массиве.</span></span><br style="font-family: Courier New;">
+
+
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;</span><br style="font-family: Courier New;">
+
+
+
+
+
+<span style="font-family: Courier New;">}</span></font><br>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1195px;"><font face="Verdana"><i><i>При вводе
+количества ордеров:3. И привводе счета плательщика 62587, 785, 123578;
+счете получателя 32565, 533, 543565; перечисляемой суммы 1000, 525,
+6000; И вводд искомого счета плательщика: 785;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1188px;"><font face="Verdana"><i><i>При вводе количества ордеров:2. И привводе
+счета плательщика 65,224546; счете получателя 2, 45; перечисляемой суммы 6554, 4525; И вводд искомого счета
+плательщика: 6554;</i></i></font><font face="Verdana"><i><i></i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1194px;"><font face="Verdana"><i><i>При вводе
+количества ордеров:4. И привводе счета плательщика 5456, 541345, 545,211345;
+счете получателя 45, 12, 2, 23; перечисляемой суммы 5, 25, 54,105; И вводд искомого счета плательщика: 789;</i></i></font><font face="Verdana"><i><i></i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

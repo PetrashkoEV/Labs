@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 6</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №6. Функции.</font></h2>
+
+
+
+</center>
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font></h3>
+
+
+
+
+<p class="MsoNormal" style="margin-left: 70.9pt; text-align: justify; text-indent: -70.9pt;">
+
+
+<br>
+
+
+</p>
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;
+</span></span></span></i><!--[endif]--><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Написать
+функцию Cos1(x,eps) вещественного типа (параметры x, eps &mdash; вещественные, eps
+&gt; 0), находящую приближенное значение функции cos(x), где </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">cos</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">(</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">) = 1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ... В сумме учитывать все
+слагаемые, большие по модулю eps.<o:p></o:p></span></div>
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+<font face="Verdana">Для нахождения приближённого значения функции Cos1() введём формулу Cos1(x)=&nbsp;</font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ...</span><br>
+
+
+<font face="Verdana">В сумме также будем учитывать все слагаемые, большие eps.</font>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+<p style="text-align: left;">
+<span style="font-family: Verdana;">Для решения этой задачи введем функцию </span><font face="Verdana">Cos1(). Которая будет вычислять </font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ... . В функции&nbsp;</span><font face="Verdana">Cos1() задатим</font><font face="Verdana"> две фактические переменные вещественного типа x и eps. В цикле будем использовать</font><font face="Verdana"> переменные у, g, s.(</font><font face="Verdana">у=-1, g=1, s=1</font><font face="Verdana">). Переменная "у" это переменная вычисляющая знак. Переменная "g" это переменная которая вычисляет </font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)!, а переменная "</span><font face="Verdana">s</font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">" это сама переменная вычисляющая значение Cos</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font face="Verdana"> при помощи переменных&nbsp;</font><font face="Verdana">у,
+g, х и n. N-это счетчик цикла for, который будет прибавлять 1 и цикл
+будет выполнятся до тех пор пока переменная g&nbsp; будет больше или
+равно eps, которое задается пользователем. &nbsp;</font><font face="Verdana"> </font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US"></span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US"></span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US"></span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US"></span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span></p>
+
+<p style="text-align: left;"><font face="Verdana">После составления функции пишем саму программу, в
+которой сразу же определяем две переменные&nbsp;типа x и
+epsilon, значения которым будет задавать пользователь программы, вводя
+значения с клавиатуры.<br>
+
+
+Теперь просто выведем на экран значение от выполнения функции Сos1(),
+т.е. после ввода данных с клавиатуры, они передадутся в функцию cos1(),
+которая обработает эти данные и вернёт соответствующее значение.</font></p>
+
+<p style="text-align: left;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font face="Verdana">&nbsp;</font></p>
+
+
+
+
+
+<h3><font face="Verdana">Блок-схема</font></h3>
+
+
+
+
+<p></p>
+
+
+
+
+<font face="Verdana"><img src="task_1_img_2.jpg">
+
+</font>
+<font face="Verdana"><img src="task_1_img_4.jpg">
+
+</font>
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+<span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(255, 0, 0);">&lt;iostream&gt;</span><br>
+
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+
+<span style="color: rgb(51, 51, 255);">double</span> cos1(<span style="color: rgb(51, 51, 255);">float</span> x, <span style="color: rgb(51, 51, 255);">float</span> eps)<br>
+
+{&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);"></span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> y=1;<br>
+
+&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> float</span>&nbsp;g=1;<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">float</span> s=1;<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> n=1; g&gt;=eps; n++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; y*= -1; <span style="color: rgb(51, 255, 51);">// знак</span><br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; g*=x*x/(2*n)/(2*n-1);<br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; s+=y*g;<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> s;<br>
+
+}<br>
+
+<span style="color: rgb(51, 51, 255);">int</span> main ()<br>
+
+{<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">float</span> x,eps;<br>
+
+&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> float</span> z;<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(255, 0, 0);">" Wwedite zna4enie cosinusa uygla, x:"</span>;<br>
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; x;<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(255, 0, 0);">" Wwedite to4nost' wupolneniia "</span>;<br>
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; eps;<br>
+
+&nbsp;&nbsp;&nbsp; z=cos1(x,eps);<br>
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(255, 0, 0);">" Zna4enie cos("</span>&lt;&lt; x &lt;&lt;<span style="color: rgb(255, 0, 0);">")="</span> &lt;&lt; z &lt;&lt; endl;<br>
+
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(255, 0, 0);">"pause"</span>);<br>
+
+&nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> return</span> 0;<br>
+
+}<br>
+
+
+
+<span style="font-family: Verdana;"><span style="color: rgb(0, 0, 153); font-weight: bold;"></span></span><br>
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+<p><font face="Verdana"><i><i>При подстановки х=1.57&nbsp; и eps=0.001<br>
+
+
+</i></i></font></p>
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+<p><font face="Verdana"><i><i>При подстановки х=0.5233&nbsp; и eps=0.001<br>
+
+
+</i></i></font></p>
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+<p><font face="Verdana"><i><i>При подстановки х=3.14&nbsp; и eps=0.001<br>
+
+
+</i></i></font></p>
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+
+
+
+</body>
+</html>

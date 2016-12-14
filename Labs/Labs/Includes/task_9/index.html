@@ -1,0 +1,1070 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 9</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №9. Двухмерные числовые массивы.</font></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""></span></span></i><span style="" lang="BE">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; С </span>помощью
+генератора случайных чисел сформировать квадратную матрицу вещественных чисел
+размерности <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">m x m</span>, где
+значение <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">m &lt;=7</span>
+вводится с клавиатуры. Диапазон формируемых в матрице значений от <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">&ndash;8 до +1</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;" lang="BE">0</span>.
+Написать программу, в которой предусмотреть подсчет в каждой строке количества
+четных элементов и их сумму. В результате на экран вывести сформированную
+матрицу, значения количества и суммы элементов с номерами соответствующих строк.<span style="" lang="BE"> <o:p></o:p></span>
+
+<p class="MsoNormal" style="text-align: justify;"><span style="" lang="BE">П</span>одсчет в
+строке значения количества четных элементов и их сумму, оформить в виде функции.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения &nbsp;поставленой задачи &nbsp;необходимо использовать ГСЧ и функцию ( <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font>).
+&nbsp;Сначала вводится число m размерностью не больше 7, далее
+производится проверка вода на корректность если ввод произведен не
+правильно то выводится сообщение об ошибке. Далее определяется ГСЧ и
+при помощи двух циклов формируется матрица с значениями от -8 до 10.
+&nbsp;После чего сформированая матрица выводится на экран и
+подключается ф-ия ( <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font>), которая будет вычислять количество четных элементов и их сумму.<br>
+&nbsp;&nbsp;&nbsp; В этой ф-ии при помощи двух циклов выбираем некоторый элемент (<font size="-1"><span style="font-family: Courier New;">mass[i][j]</span></font>)
+который проверяется на четность. Если элемент четный то в новый массив
+в первый столбец записываем номер строки, во второй столбец записываем
+сумму четных элементов, а в третий столбец записываем количество четных
+элементов. Если же элемент не четный то поисходит проверка на то что а
+существуют ли в этой строке четные элементы, если нет то в первый
+столбец записываем номер строки, а в остальные столбцы записываем нули.<br>
+&nbsp;&nbsp;&nbsp; Далее после того как выполнилась ф-ия происходит
+вывод нового массива в виде таблицы (1 столбец - номер строки, 2
+столбец - сумма четных элементов, а 3 столбец - колличество четных
+элементов).&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;поставленой задачи &nbsp;подключить &nbsp;библиотеку <font style="color: rgb(0, 0, 0);" size="-1"><span style="font-family: Courier New;">&lt;time.h&gt;</span></font>&nbsp;необходимую для генирации случайного числа. Далее определяем массив&nbsp;<font size="-1"><span style="font-family: Courier New;">mass </span></font>размерностью
+8 на 8 и массив а размерностью 8 на 3, в который будем записывать: в 1
+столбец номер строки, во 2 столбец сумму четных элементов строки, а в 3
+столбец будем помещать количество четных элементов. После чего
+определяем функцию <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow</span></font>,
+которая будет описана позней. Далее выводим сообщение о том что нужно
+ввести размерность массива не более 7. После чего делаем проверку числа
+на корректность ввода. Если число удовлетворяет отрезку&nbsp;[1,7] то
+определяем Генератор Случайных Чисел (ГСЧ), а уже затем при помощи двух
+циклов присваиваем каждому элементу массива определенное значение
+которое сгенерировал ГСЧ в диапазоне от -8 до 10. Затем при помощи двух
+циклов выводим полученный массив на экран. Далее подключаем ф-ию <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow.</span></font><br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; При помощи этой функции мы будем
+записывать в массив "а": номер строки, сумму четных элементов строки и
+количество четных элементов этой строки. Для начала определяем &nbsp;3
+переменные (<font size="-1"><span style="font-family: Courier New;"> sum, kl, znak </span></font>).
+В которые будем помещать соответственно: сумму положительных элементов,
+количество положительных элементов, и&nbsp; переменная необходимая на
+тот случай если в строке небудет не одного четного элемента. Далее при
+помощи двух циклов, необходимых для выборки элемента из массива, после
+чего используем инструкцию if (<font size="-1"><span style="font-family: Courier New;">mass[i][j]%2==0</span></font>) который осуществляет проверку числа &nbsp;(<font size="-1"><span style="font-family: Courier New;">mass[i][j]</span></font>) на четность. Если элемент (<font size="-1"><span style="font-family: Courier New;">mass[i][j]</span></font>) четный то к переменной <font size="-1"><span style="font-family: Courier New;">kl </span></font>прибовляем еденицу (эта переменная вычисляет колличество положительных элементов), к переменной <font size="-1"><span style="font-family: Courier New;">sum</span></font> ( хронящая сумму четных элементов ) добовляем элемент&nbsp;<font size="-1"><span style="font-family: Courier New;">mass[i][j],</span></font> &nbsp; а затем в 1 столбец массива помещаем номер строки, далее во 2 столец помещаем переменную <font size="-1"><span style="font-family: Courier New;">sum</span></font>. и в 3 столбец помещаем переменную <font size="-1"><span style="font-family: Courier New;">kl</span></font> ( хронящая количество четных элементов ). А в теле инструкции else if (<font size="-1"><span style="font-family: Courier New;">mass[i][j]%2==1</span></font>) к переменной&nbsp;<font size="-1"><span style="font-family: Courier New;">znak</span></font> добавим 1. Далее делаем&nbsp;проверку if (<font size="-1"><span style="font-family: Courier New;">znak=m</span></font>)
+и записываем в 1 столбец номер строки. Т.е эта переменная предазначена
+на тот случай если в строке не окажится не одного четного элемента и
+если это произошло то в 1 столбец запишется номер строки, а в остольнае
+столбцы запишутся нули. т.к после вложеного цикла эти переменные
+зануляются. <br>
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; После того как функция <font size="-1"><span style="font-family: Courier New;">koli4estwo_ilementow </span></font>выполнилась происходит вывод на экран сформулированую матрицу "а" в виде таблицы.&nbsp; &nbsp; <span style="color: rgb(0, 0, 0);"></span><br>
+
+
+
+
+
+
+
+
+
+
+<span style="color: rgb(0, 0, 0);">&nbsp;&nbsp;&nbsp; </span>&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+<font size="-1"><span style="color: rgb(51, 51, 255); font-family: Courier New;"># include</span><span style="font-family: Courier New;"> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;"># include</span><span style="font-family: Courier New;"> <span style="color: rgb(153, 0, 0);">&lt;stdio.h&gt;</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;"># include</span><span style="font-family: Courier New;"> <span style="color: rgb(153, 0, 0);">&lt;time.h&gt;</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">using namespace</span><span style="font-family: Courier New;"> std;</span><br style="font-family: Courier New;">
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">const int</span><span style="font-family: Courier New;"> strok=8, stolb=8;</span><br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> mass [strok][stolb]; <span style="color: rgb(0, 102, 0);">// заводим массив размером 8х8</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> a [strok][3]; <span style="color: rgb(0, 102, 0);">// заводим массив размером 8х3</span></span><br style="font-family: Courier New;">
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> koli4estwo_ilementow (<span style="color: rgb(51, 51, 255);">int</span> m)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">{</span><br style="font-family: Courier New;">
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> int</span><span style="font-family: Courier New;"> sum=0, kl=0, znak=0;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> i=1; i&lt;=m; i++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> int</span><span style="font-family: Courier New;"> j=1; j&lt;=m; j++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> if</span><span style="font-family: Courier New;"> (mass[i][j]%2==0)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; kl++;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; sum+=mass[i][j];</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; a[i][1]=i; <span style="color: rgb(0, 102, 0);">// номер строки</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; a[i][2]=sum; <span style="color: rgb(0, 102, 0);">//сумма четных элементов в строке</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; a[i][3]=kl; <span style="color: rgb(0, 102, 0);">//количество четных элементов</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">else if</span><span style="font-family: Courier New;"> (mass[i][j]%2==1)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; znak++;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">if </span><span style="font-family: Courier New;">(znak=m)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a[i][1]=i; <span style="color: rgb(0, 102, 0);">// номер строки в том случае когда в строке нет четных элементов</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; kl=0, sum=0, znak=0; <span style="color: rgb(0, 102, 0);">// зануление элементов</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">return</span><span style="font-family: Courier New;"> (a[m][3]);</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">}</span><br style="font-family: Courier New;">
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+<span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> main()</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">{</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> int</span><span style="font-family: Courier New;"> m=0;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите размерность массива, не более 7: "</span>; <span style="color: rgb(0, 102, 0);">// ввод размерности массива</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cin &gt;&gt; m;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> if</span><span style="font-family: Courier New;"> (m&lt;0 || m&gt;7) <span style="color: rgb(0, 102, 0);">// провека на корректность ввода</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Размерность введена не правильно "</span> &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> return</span><span style="font-family: Courier New;"> 1;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; srand (( </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">unsigned</span><span style="font-family: Courier New;">) time(NULL)); <span style="color: rgb(0, 102, 0);">// определение ГСЧ</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int </span><span style="font-family: Courier New;">i=1; i&lt;=m; i++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> j=1; j&lt;=m; j++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mass[i][j]=rand()%19-8; <span style="color: rgb(0, 102, 0);">// запись произвольного числа</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }<br>
+
+<br style="font-family: Courier New;">
+
+</span>
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Изначальный массив: "</span> &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// вывод сформулированого при помощи ГСЧ массива</span><br>
+
+<br style="font-family: Courier New;">
+
+</span>
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; </span><span style="color: rgb(51, 51, 255); font-family: Courier New;">for </span><span style="font-family: Courier New;">(</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> i=1; i&lt;=m; i++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> j=1; j&lt;=m; j++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp;&nbsp;&nbsp; "</span>;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// включение ф-ии</span></span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> int </span><span style="font-family: Courier New;">z=0;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; z=koli4estwo_ilementow (m);<br>
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+</span><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// 1 столбец- номер строки, 2 страка -сумма элементов&nbsp; 3 строка- количество четных чисел.<br>
+
+
+
+<br style="font-family: Courier New;">
+
+
+
+</span></span><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"_______________________________________"</span> &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// вывод массива в виде таблицы&nbsp;</span> </span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" № строки ||сумма + эл||кол-во чет. эл."</span> &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for</span><span style="font-family: Courier New;"> (</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int </span><span style="font-family: Courier New;">i=1; i&lt;=m; i++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> for </span><span style="font-family: Courier New;">(</span><span style="color: rgb(51, 51, 255); font-family: Courier New;">int</span><span style="font-family: Courier New;"> j=1; j&lt;=3; j++)</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp;&nbsp;&nbsp;&nbsp; "</span>&lt;&lt; a[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp;&nbsp;&nbsp; ||"</span>;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"_______________________________________"</span>&lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(51, 51, 255); font-family: Courier New;"> return</span><span style="font-family: Courier New;"> 0;</span><br style="font-family: Courier New;">
+
+
+
+<span style="font-family: Courier New;">}</span></font><br>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: Verdana;"><span style="color: rgb(0, 0, 153); font-weight: bold;"></span></span><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1170px;"><font face="Verdana"><i><i>При вводе размерности массива равному 3.<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе размерности массива равному 6</i></i></font><font face="Verdana"><i><i>.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1085px;"><font face="Verdana"><i><i>При вводе размерности массива равному 2</i></i></font><font face="Verdana"><i><i>.</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+<br>
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 7</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №7. Вызов функции по ссылке.</font><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></h2>
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font></h3>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin-left: 70.9pt; text-align: justify; text-indent: -70.9pt;">
+
+
+<br>
+
+
+
+
+
+</p>
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"><span style=""><span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;"></span></span></span></i><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span>
+
+<p style="width: 1214px;" class="MsoNormal"><span style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Написать
+функцию Cos1(x,eps) вещественного типа (параметры x, eps &mdash; вещественные, eps
+&gt; 0), находящую приближенное значение функции cos(x), число n и величину
+последнего элемента, где cos(x) = 1 &ndash; x2 / 2! + x4 / 4! &ndash; ... + (&ndash;1)n x2n /
+(2n)! + ... В сумме учитывать все слагаемые, большие по модулю eps.<o:p></o:p></span></p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp; Для нахождения приближённого значения функции Cos() введём формулу Cos(x)=&nbsp;</font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ... , найдем величину n и значение последнего элемента.</span><br>
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp; В сумме также будем учитывать все слагаемые, большие eps.</font>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+<p style="text-align: left; width: 1206px;">
+<span style="font-family: Verdana;">&nbsp;&nbsp;&nbsp; Для решения этой задачи введем функцию </span><font face="Verdana">Cos(). Которая будет вычислять косинус угла по фомуле : </font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ... номер последнего элемента (</span><font size="-1"><span style="font-family: Courier New;">num</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">) и его значение (</span><font size="-1"><span style="font-family: Courier New;">last</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">). В теле этой ф-ии cos определим переменные преденазначеные для:&nbsp; вычисление значения знака в зависемости от n (</span><font size="-1"><span style="font-family: Courier New;">y=1</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">), вычисления значения последнего члена (</span><font size="-1"><span style="font-family: Courier New;">next=1</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">), вычисление велечины угла (</span><font size="-1"><span style="font-family: Courier New;">s=0</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">). И присвоение переменной, по вычислению последнего значения, значение равное 0 (</span><font size="-1"><span style="font-family: Courier New;">last=0</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">).&nbsp; Далее определим цикл (</span><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (num=0; next&gt;=eps; num++)</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> , где </span><font size="-1"><span style="font-family: Courier New;">num</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> сохроняет&nbsp;номер последнего элемента), а в теле цикла присвоим переменной </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font size="-1"><span style="font-family: Courier New;">last</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">&nbsp;значение&nbsp;</span><font size="-1"><span style="font-family: Courier New;">next</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> (</span><font size="-1"><span style="font-family: Courier New;">last=next</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">), где&nbsp;</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font size="-1"><span style="font-family: Courier New;">last</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> это значение последнего элемента, по умолчянию равно 1, а </span><font size="-1"><span style="font-family: Courier New;">next</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">&nbsp;это велечина следующего члена ряда. А к переменной s ,вычисляющей значение косинуса угла, прибовляем&nbsp;"знак" (</span><font size="-1"><span style="font-family: Courier New;">s+=y*last</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">). затем переменную вычисляющую знака умножаем на (-1). И по формуле:&nbsp;</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">1 &ndash; </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 2! + </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">4</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / 4! &ndash; ... + (&ndash;1)<sup>n</sup> </span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">x</span><sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">2n</span></sup><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> / (2</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;" lang="EN-US">n</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">)! + ...</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> вычисляем значение текущего элемента элемента (</span><font size="-1"><span style="font-family: Courier New;">next*=x*x/(2*num+1)/(2*num+2);</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">). После завершения цикла в переменной&nbsp;</span><font size="-1"><span style="font-family: Courier New;">num</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> хронится номер последнего элемента в переменной&nbsp;</span><font size="-1"><span style="font-family: Courier New;">last</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> хранится велечина этого элемента, где эти две переменные выводим на экран, а в переменной&nbsp;</span><font size="-1"><span style="font-family: Courier New;">s</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> хранится значения косинуса в данном угле.</span></p>
+<p style="text-align: left; width: 1206px;"><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">&nbsp;&nbsp;&nbsp; В главной ф-ии определим переменные </span><font size="-1"><span style="font-family: Courier New;">x,eps,last,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">num</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">, где&nbsp;</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font size="-1"><span style="font-family: Courier New;">x</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> это угол введеный с клавиатуры пользованелем,&nbsp;</span><font size="-1"><span style="font-family: Courier New;">eps</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">&nbsp;это&nbsp;</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">точность выполнения которая также вводится с клавиатуры,&nbsp;</span><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"></span><font size="-1"><span style="font-family: Courier New;">last</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"> это переменная хранящая велечину последнего элемента, а&nbsp;</span><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">num</span></font><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">
+это переменная вычисляющая номер последнего элемента. Затем после
+определения этих элементов просим пользователя ввести значение угла и
+точность выполнения. Затем определим ф-ию cos, описаную выше, и выведем
+на экран велечину косинуса угла. </span></p>
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Блок-схема</font></h3>
+
+
+
+
+
+
+
+<p></p>
+
+
+
+
+
+
+
+<font face="Verdana"><img src="task_1_img_2.jpg">
+
+</font>
+<font face="Verdana"><img src="task_1_img_4.jpg">
+
+</font>
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><br>
+<span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+<br>
+<span style="color: rgb(51, 51, 255);">double</span> cos(<span style="color: rgb(51, 51, 255);">double</span> x, <span style="color: rgb(51, 51, 255);">double</span> eps, <span style="color: rgb(51, 51, 255);">double</span> &amp;last, <span style="color: rgb(51, 51, 255);">int</span> &amp;num)<br>
+{&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> y=1;<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">double</span> next=1, s=0;<br>
+&nbsp;&nbsp;&nbsp; last=0;<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (num=0; next&gt;=eps; num++)<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; last=next; </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// вычисление последнего члена</span></span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s+=y*last; </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// вычисление косинуса уга</span></span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y*= -1;&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// вычисление значение знака в зависимисти от n</span></span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; next*=x*x/(2*num+1)/(2*num+2); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// вычисление значение n-го элемента бес учета знака</span></span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Значение n="</span>&lt;&lt; num &lt;&lt; endl;<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Величина последнего элемента: "</span> &lt;&lt; last &lt;&lt;endl;<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> s;<br>
+}<br>
+<span style="color: rgb(51, 51, 255);">int</span> main ()<br>
+{<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">double</span> x,eps,last;<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> num;<br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите угл косинуса x: "</span>;<br>
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; x;<br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите точность выполнения: "</span>;<br>
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; eps;<br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Значение cos("</span> &lt;&lt; x &lt;&lt; <span style="color: rgb(153, 0, 0);">")="</span> &lt;&lt; cos(x, eps, last, num) &lt;&lt; endl;<br>
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+}</span><span style="font-family: Courier New;"></span></font><br>
+
+
+
+
+
+
+<span style="font-family: Verdana;"><span style="color: rgb(0, 0, 153); font-weight: bold;"></span></span><font size="-1"><span style="font-family: Courier New;"></span><span style="font-family: Courier New;"></span></font>
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>При подстановки х=1.57&nbsp; и eps=0.001<br>
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 2</i></i></font></h4>
+
+
+
+
+
+<p><font face="Verdana"><i><i>При подстановки х=0.5233&nbsp; и eps=0.001<br>
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_02.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 3</i></i></font></h4>
+
+
+
+
+
+<p><font face="Verdana"><i><i>При подстановки х=3.14&nbsp; и eps=0.001<br>
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i> <img src="task_1_img_03.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

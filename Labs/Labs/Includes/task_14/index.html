@@ -1,0 +1,780 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 14</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №14. Явные конструкторы и деструкторы.</font><b><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></b></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"></span></i><span style="font-size: 14pt; line-height: 115%;"></span>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; width: 1144px;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&nbsp;&nbsp;&nbsp; Описать класс с
+именем ORDER, содержащий следующие закрытые переменные &ndash; члены класса (поля): <o:p></o:p></span></p>
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">расчетный счет плательщика; <o:p></o:p></span></p>
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">расчетный счет получателя; <o:p></o:p></span></p>
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 12pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">перечисляемая сумма в руб. <o:p></o:p></span></p>
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 17.85pt; text-align: justify; width: 1133px;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">Написать программу, выполняющую ввод и
+вывод полей <span style="">&nbsp;</span>объектов </span><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">O</span></b><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1, </span></b><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">O</span></b><b style=""><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span></b><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"> класса ORDER.<o:p></o:p></span></p>
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><span style="font-size: 14pt; line-height: 115%;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Математическая модель</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">&nbsp;&nbsp;&nbsp;</font> Для решения &nbsp;поставленой задачи нам необходим класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span> (данным по условию). Этот класс содержит конструктор, деструктор и ф-ию <font size="-1"><span style="font-family: Courier New;">output</span></font>, типа public:&nbsp;&nbsp;<font size="-1"><span style="font-family: Courier New;">order</span></font><font size="-1"><span style="font-family: Courier New;"> </span></font>- эта явный конструктор который необходим для ввода информаци с клавиатуры в поля класса типа private,&nbsp; ф-ия <font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">output</span></font><font size="-1"><span style="font-family: Courier New;">&nbsp;</span></font> выводит поля закрытого типа класса, и деструкор выводит сообщение о том что объект уничтожен. Определяем класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span>, определяем конструктор&nbsp;<font size="-1"><span style="font-family: Courier New;">order</span></font>, деструктор <font size="-1"><span style="font-family: Courier New;">~order</span></font> и ф-ию <font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">output</span></font>. Они&nbsp;будут описыватся далее.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Явный конструктор&nbsp;&nbsp;<font size="-1"><span style="font-family: Courier New;">order</span></font>&nbsp; необходим для ввода информаци с клавиатуры в поля класса типа
+private. В теле явного конструктора&nbsp;будем записывать значения
+(счет плательщика, счет получателя, сумму снятую со счета) в переменные
+класса, закрытого типа.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия<font size="-1"><span style="font-family: Courier New;"> output </span></font>эта
+ф-ия выводит поля закрытого типа класса. Выводим счет получателя, счет
+плательщика, сумму снятую со счета.<br>
+&nbsp;&nbsp;&nbsp; Явный деструктор <font size="-1"><span style="font-family: Courier New;">~order</span></font> выводит соодщение о том что объект уничтожен. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;задачи нам
+необходим  класс с именем <span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">ORDER</span> (данным по условию). В этом классе будут размещены поля открытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">public</span></span></font>) и закрытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">private</span></span></font>) типа&nbsp;. &nbsp;В открытом типе размещены: вный конструктор,&nbsp;<font size="-1"><span style="font-family: Courier New;">order ()</span></font>, явный деструктор, <font size="-1"><span style="font-family: Courier New;">~order ()</span></font>, и ф-ия:&nbsp;<font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">output ()</span></font><font size="-1"><span style="font-family: Courier New;">.</span></font>&nbsp; Они обеспечивают ввод и вывод значений (счет плательщика, счет
+получателя, сумма) соответственно. В закрытом типе будут размешены
+элементы&nbsp;<font size="-1"><span style="font-family: Courier New;">payer</span></font>, эта переменная сохроняющая счет плательщика, <font size="-1"><span style="font-family: Courier New;">adres</span></font>, эта переменная сохроняющая счет получателя, <font size="-1"><span style="font-family: Courier New;">sum,</span></font> эта переменная сохроняющая сумму снятую со счета. <br>
+
+
+&nbsp;&nbsp;&nbsp; В главной ф-ии определяем класс&nbsp;<font size="-1"><span style="font-family: Courier New;">order</span></font> (<font size="-1"><span style="font-family: Courier New;">order o1</span></font>), определяем ф-ию&nbsp;<font size="-1"><span style="font-family: Courier New;">output ()</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"> (</span></font><font size="-1"><span style="font-family: Courier New;">o.</span></font><font size="-1"><span style="font-family: Courier New;">output ()</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>, определяем явный деструктор<font size="-1"><span style="font-family: Courier New;">&nbsp;</span></font> <font size="-1"><span style="font-family: Courier New;">~order ()</span></font><font size="-1"><span style="font-family: Courier New;"> (</span></font><font size="-1"><span style="font-family: Courier New;">o1.</span></font><font size="-1"><span style="font-family: Courier New;">~order ()</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>.&nbsp;
+Эти ф-ии будут далее рассмотрены подробно. Явный конструкорв главной
+ф-ии&nbsp; не определяем так как он определяется автоматически.<br>
+
+
+&nbsp;&nbsp;&nbsp; Явный конструктор&nbsp;<font size="-1"><span style="font-family: Courier New;">order()</span></font> предназначен для ввода с клаватуры значений: счет плательщика, счет получателя, сумму.&nbsp;<font size="-1"><span style="font-family: Courier New;"></span></font> Выводим на экран сообщения о том что обьект создан и о вводе пользователем: счет плательщика,
+счет получателя, сумму и сохроняем эти значения в переменные <font size="-1"><span style="font-family: Courier New;">payer, </span></font><font size="-1"><span style="font-family: Courier New;">adres,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">sum</span></font><font size="-1"><span style="font-family: Courier New;">&nbsp;</span></font> соответственно.<br>
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">output ()</span></font> предназначеа для вывода введеной информации с клавиатуры. В теле ф-ии выводм переменные&nbsp;<font size="-1"><span style="font-family: Courier New;">payer, </span></font><font size="-1"><span style="font-family: Courier New;">adres,&nbsp;</span></font><font size="-1"><span style="font-family: Courier New;">sum</span></font><font size="-1"><span style="font-family: Courier New;"></span></font><font size="-1"><span style="font-family: Courier New;"></span></font>, которые вводились в предедущей ф-ии. Эта ф-ия определена как константа (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">void</span> output () <span style="color: rgb(51, 51, 255);">const</span></span></font>) т.е. она только выводит данные и ничего не меняет в них. Это необходимо для избежания ошибок на этапе компиляции. <span style="color: rgb(0, 0, 0);"></span><span style="color: rgb(0, 0, 0);"></span> <br>
+&nbsp;&nbsp;&nbsp; Явный деструктор&nbsp; <font size="-1"><span style="font-family: Courier New;">~order ()</span></font> выводит сообщение о том что объект уничтожен. 
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);"></span></span>&nbsp;<span style="font-family: Courier New;"></span><span style="font-family: Courier New;"></span><span style="font-family: Courier New;"><br>
+<span style="color: rgb(51, 51, 255);">#include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+<br>
+<span style="color: rgb(51, 51, 255);">class</span> order<br>
+{<br>
+<span style="color: rgb(51, 51, 255);">public:</span><br>
+&nbsp;&nbsp;&nbsp; order(); <span style="color: rgb(0, 102, 0);">// явный конструктор</span><br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> output () <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// ф-ия вывода счетов и суммы, которая определена как константа.</span><br>
+&nbsp;&nbsp;&nbsp; ~order (); <span style="color: rgb(0, 102, 0);">// явный деструктор</span> <br>
+<span style="color: rgb(51, 51, 255);">private:</span><br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> payer; <span style="color: rgb(0, 102, 0);">// счет плательщика</span> <br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> adres; <span style="color: rgb(0, 102, 0);">// счет получателя</span><br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> sum; <span style="color: rgb(0, 102, 0);">// сумма</span><br>
+};<br>
+<br>
+order::order() </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// явный конструктор</span></span></font><br>
+<font size="-1"><span style="font-family: Courier New;">{<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Объект создан "</span> &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// сообщение о том что объект создан</span><br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет плательщика: "</span>; <span style="color: rgb(0, 102, 0);">// сообщение о том что необходимо ввести счет плательщика</span><br>
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; payer;<br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите счет получателя: "</span>; <span style="color: rgb(0, 102, 0);">// </span></span></font><font style="color: rgb(0, 102, 0);" size="-1"><span style="font-family: Courier New;">сообщение о том что необходимо ввести счет получателя</span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cin &gt;&gt; adres;<br>
+<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите перечисляемую сумму: "</span>; <span style="color: rgb(0, 102, 0);">// </span></span></font><font style="color: rgb(0, 102, 0);" size="-1"><span style="font-family: Courier New;">сообщение о том что необходимо ввести перечисляемую сумму</span></font><br>
+<font size="-1"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp; cin &gt;&gt; sum;<br>
+}<br>
+<br>
+<span style="color: rgb(51, 51, 255);">void</span> order::output () <span style="color: rgb(51, 51, 255);">const </span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// ф-ия вывода счетов и суммы, которая определена как константа.</span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"></span><br>
+{<br>
+&nbsp;&nbsp;&nbsp; вывод данных<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет плательщика: "</span> &lt;&lt; payer &lt;&lt; endl;<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Счет получателя: "</span> &lt;&lt; adres &lt;&lt; endl;<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сумма: " </span>&lt;&lt; sum &lt;&lt; endl;<br>
+}<br>
+<br>
+order::~order () </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// явный деструктор</span> </span></font><br>
+<font size="-1"><span style="font-family: Courier New;">{<br>
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Обьект унечтожен !!!"</span> &lt;&lt; endl; <span style="color: rgb(0, 102, 0);">// вывод сообщения о том что объекты класса уничтожены</span><br>
+}<br>
+<br>
+<span style="color: rgb(51, 51, 255);">int</span> main()<br>
+{<br>
+&nbsp;&nbsp;&nbsp; order o1;<br>
+&nbsp;&nbsp;&nbsp; o1.output (); <span style="color: rgb(0, 102, 0);">// определение </span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">ф-ии вывода счетов и суммы, которая определена как константа.</span></span></font><font size="-1"><span style="font-family: Courier New;">&nbsp; <br>
+&nbsp;&nbsp;&nbsp; o1.~order (); <span style="color: rgb(0, 102, 0);">// определение явного деструктора</span><br>
+<br>
+&nbsp;&nbsp;&nbsp; system(<span style="color: rgb(153, 0, 0);">"PAUSE"</span>);<br>
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+}<br>
+
+
+
+
+<br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);"></span></span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"></span></span></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1195px;"><font face="Verdana"><i><i>При вводе счета плательщика 5456;
+счете получателя 546; перечисляемой суммы 45;<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

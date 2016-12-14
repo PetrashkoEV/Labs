@@ -1,0 +1,1916 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Петрашко Евгения Викторовича студента - 1 курс 7 группа - ПОИТ 2009 - Отчет по общеинженерной практике - Задание 15</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+p{
+width:700px;
+}
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font face="Verdana">
+</font>
+<center>
+<h2><font face="Verdana">Лабораторное задание №15.&nbsp;</font></h2>
+
+
+
+
+
+<h2><font face="Verdana">Класс для обработки двумерного целочисленного массива.</font><b><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"></span></b></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana">Условие задачи</font>&nbsp;</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: left;"><i style=""><span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;; color: rgb(255, 153, 0);"></span></i><span style="font-size: 14pt; line-height: 115%;"></span>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; width: 1204px;"><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&nbsp; &nbsp; Написать
+программу, в которой предусмотреть класс для организации обработки двумерного целочисленного
+массива. Внутри класса реализовать два конструктора: 1&ndash;й конструктор должен
+обеспечивать ввод элементов массива с клавиатуры; 2&mdash;й конструктор должен
+формировать значения элементов массива в задаваемом диапазоне [</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">min</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">, </span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">max</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">] с помощью генератора случайных
+значений. Внутри класса предусмотреть следующие методы:<o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вывод массива на экран;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">вывод в каждой строке сначала всех
+отрицательных элементов, потом всех остальных;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt; width: 1077px;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;</span></span></span><!--[endif]--><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"> &nbsp;вычисление значения<span style="">&nbsp; </span>суммы элементов в тех строках, которые
+содержат хотя бы один отрицательный элемент;</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt; width: 1129px;"><!--[if !supportLists]--><span style="font-size: 14pt; line-height: 115%; font-family: Symbol;"><span style="">&middot;<span style="font-family: &quot;Times New Roman&quot;; font-style: normal; font-variant: normal; font-weight: normal; font-size: 7pt; line-height: normal; font-size-adjust: none; font-stretch: normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&nbsp;&nbsp; вывод номеров строк и столбцов всех
+седловых точек матрицы (Матрица А имеет седловую точку А</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">ij</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">, если А</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">ij</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"> является минимальным элементом в </span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">i</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&ndash;й строке и максимальным в </span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">j</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&ndash;м столбце)</span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">.<o:p></o:p></span></p>
+
+
+
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 35.7pt; text-align: justify; text-indent: -17.85pt;"><span style="font-size: 14pt; line-height: 115%;"></span><span style="font-size: 14pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span style="font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;"><o:p></o:p></span></div>
+
+
+
+&nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;<span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;; color: rgb(0, 0, 0);"></span>
+
+<h3><font face="Verdana">Описание алгоритма</font></h3>
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Для решения &nbsp;задачи нам
+необходим  клас int_mass.&nbsp; В этом классе будут размещены поля открытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">public</span></span></font>) и закрытого (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">private</span></span></font>) типа&nbsp;. &nbsp;В открытом типе размещены ф-ии:&nbsp;<font size="-1"><span style="font-family: Courier New;">inpt_1_mass</span></font>, предназначеной для формирования массива вводом чисел с клаватуры, <font size="-1"><span style="font-family: Courier New;">inpt_2_mass</span></font>, ф-ия предназначена для формирования массива при помощи ГСЧ,&nbsp;<font size="-1"><span style="font-family: Courier New;">output_mass</span></font>, метод по выводу сформулированого массива на экран, <font size="-1"><span style="font-family: Courier New;">outut_negativ</span></font>, метод по выводу сначала всех отрицательных, а потом всех остальных элементов, <font size="-1"><span style="font-family: Courier New;">sum_mass</span></font>, метод по вычислению суммы элементов в тех строках , которые содержат &nbsp;хотя бы один отрицательный элемент,&nbsp;<font size="-1"><span style="font-family: Courier New;">saddle</span></font>, ф-ия по нахождению седловых точек.&nbsp;В закрытом типе будут размешены: двумерный массив(<font size="-1"><span style="font-family: Courier New;">mass[10][10]</span></font>), минимальное (<font size="-1"><span style="font-family: Courier New;">min</span></font>) и максимальное (<font size="-1"><span style="font-family: Courier New;">max</span></font>) число в массиве сформированого ГСЧ.<br>
+
+
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; В главной ф-ии выведем на экран
+сообщение о том что необходимо ввести размерность массива. Определим
+"флаг" (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">bool</span> flag</span></font>),
+зачем он нужен будет описано поздней. Затем решение задачи разобьется
+на два вида массива: для значений введеных с клавиатуры и значений
+сформированых ГСЧ в определенном промежутке. <br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Мы рассмотрим решение тольоко для ввода чисел с
+клавиатуры. т.к. эти методы будут использовать одинаковые ф-ии.
+Различие будет состоять в том что при вводе чисел с клавиатеры мы будем
+использовать ф-ию <font size="-1"><span style="font-family: Courier New;">inpt_1_mass</span></font>, а при формирований чисел ГСЧ используется ф-ия&nbsp; <font size="-1"><span style="font-family: Courier New;">inpt_2_mass</span></font>. <br>
+
+
+
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Ввод чисел с клавиатуры: для начала необходимо определить массив (<font size="-1"><span style="font-family: Courier New;">int_mass M1</span></font>) и ввести данные в массив при помощи ф-ии <font size="-1"><span style="font-family: Courier New;">M1.inpt_1_mass</span></font>. Ввывести сообщение о том что массив был сформирован и вывести его на экан при помощи ф-ии&nbsp;<font size="-1"><span style="font-family: Courier New;">output_mass (</span></font><font size="-1"><span style="font-family: Courier New;">M1.output_mass (n)</span></font><font size="-1"><span style="font-family: Courier New;">)</span></font>. Затем подключить ф-ию <font size="-1"><span style="font-family: Courier New;">outut_negativ</span></font>, по выводу сначала всех отрицательных а потом всех остальных элиментов, и подключить ф-ию <font size="-1"><span style="font-family: Courier New;">sum_mass</span></font>,
+по вычислению значения суммы эл в тех строках которые содержат хотя бы
+один отрицательный элемент. Присвоить "флагу" значение&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">false</span></span></font> (<font size="-1"><span style="font-family: Courier New;">flag=<span style="color: rgb(51, 51, 255);">false</span></span></font>). Определить цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)</span></font>) для того чтобы на вход ф-ии подовался двумерный массив построчно. Определим ф-ию <font size="-1"><span style="font-family: Courier New;">saddle</span></font>., по вычислению седловых точек в массиве. т.е. если <span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">матрица А имеет седловую точку А</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">ij</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">, если А</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">ij</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"> является минимальным элементом в </span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">i</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&ndash;й строке и максимальным в </span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">j</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">&ndash;м столбце</span>. Все эти ф-ии ,кроме <font size="-1"><span style="font-family: Courier New;">saddle</span></font>, на вход получают размерность, а ф-ия <font size="-1"><span style="font-family: Courier New;">saddle</span></font>
+на вход получает размерность массива, номер строки которая будет
+обрабатывятся и по ссылке передается "флаг". Флаг предназначен для того
+чтобы вывести сообщение о том что в массиве нет седловых точек, если
+действительно таких точек нет. т.к. когда хотябы одна точка найдется то
+флагу будет присвоено значение <font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">true</span></span></font>. Все ф-ии будут подробно описаны далее.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">inpt_1_mass</span></font>.
+Предназначена для формирования массива вводом чисел с клавиатуры.
+Определим два цикла for , предназначеных для вычисления номера строки и
+номера столбца, и выведем сообщение о том что необходимо ввести <span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">А</span><span style="font-size: 12pt; line-height: 115%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;" lang="EN-US">ij</span> элимент.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; Ф-ия&nbsp;<font size="-1"><span style="font-family: Courier New;">inpt_2_mass</span></font>.
+Предназначенной для формирования массива при помощи ГСЧ. Выведем
+сообщение о том что необходимо ввести max и min значения. определить
+ГСЧ (<font size="-1"><span style="font-family: Courier New;">srand (( <span style="color: rgb(51, 51, 255);">unsigned</span>) time(NULL))</span></font>)
+и также определим два цикла for, предназначеных для вычисления номера
+строки и номера столбца, и присвоим некоторому элименту сформированое
+ГСЧ значение в определенном промежутке (<font size="-1"><span style="font-family: Courier New;">mass[i][j]=rand()%(max-min+1)+min</span></font>).<br>
+
+
+
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">output_mass</span></font>.
+Ф-ия по выводу сформулированого массива на экран. Снова определим два
+цикла for, предназначеных для вычисления номера строки и номера
+столбца, и выведем на экран элименты.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">outut_negativ</span></font>.
+Метод по выводу сначала всех отрицательных, а потом всех остальных
+элементов. Выведем сообщени о том что сейчас будет выведен
+отсортированый массив. Определим 1-ый цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int </span>i=0; i&lt;n; i++)</span></font>),
+цикл по вычисления номера строки. В теле этого цикла опрнделим еще 2
+цикла for: 1-ый для вывода отрицательных чисел, а 2-ой для вывода всех
+остальных элиментов. Определив уже 3-й цикл for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)</span></font>), для вывода отрицательных чисел. Определим одну условную конструкцию if (<font size="-1"><span style="font-family: Courier New;">mass[i][j]&lt;0</span></font>)
+которая будет проверять элимен на отрицательность. Если элимент
+отрицательный то его необходимо вывести на экран. В 3-ем цикле for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)</span></font>), для вывода всех остальных элементов. Определим одну условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&gt;=0)</span></font>)
+которая будет проверять элимент на положительность и выводить его на
+экран. т.о. после этих 3 циклов на экан будет выведен отсортированый
+массив в порядке возростания.<br>
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">sum_mass</span></font>.&nbsp;метод
+по вычислению суммы элементов в тех строках , которые содержат
+&nbsp;хотя бы один отрицательный элемент. Выведем на экран сообщение
+что сейчас будет выведена сумма строки в которой присутствует хотябы
+один отрицательный элимент и сделаем небольшую заготовку таблицы.
+Определим цикл for предназначеный для вычисления некоторго ромера
+строки. В теле этого цикла определим переменную summ (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> summ=0</span></font>)
+котороя будет хранить сумму элементов строки и предварительно занулим
+эту переменную. Это сделано для того что если в строке нет
+отрицательных элиментов то вместо значения суммы выведется значение 0.
+Далее определим цикл for который вычисляет номер некоторого элемента в
+i строке. А в теле этого цикла определим условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&lt;0)</span></font>)
+которая будет проверять элименты на отрицательность. Если элимент
+отрицательный то в нутри конструкции определим цикл for предназначеный
+для вычисления номера столбца в i строке с начала. А в теле этого цикла
+к переменной <font size="-1"><span style="font-family: Courier New;">summ</span></font> будем добовлять некоторый элемент строки<font size="-1"><span style="font-family: Courier New;">&nbsp;mass[i][k]</span></font> (<font size="-1"><span style="font-family: Courier New;">summ+=mass[i][k]</span></font>). т.е. быдет происходить вычисление суммы строки. Как только подсчет суммы завершен то выполнится команда&nbsp;<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">break</span></span></font>
+по выходу из 2-го цикла и для перехода в новую строку. Это сделано на
+тот случай если в строке несколько отрицательных элимента. Но в конце
+1-го циква произойдет вывод: номер строки и сумма в этой строке в виде
+таблици. <br>
+
+
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; Ф-ия <font size="-1"><span style="font-family: Courier New;">saddle</span></font>. Это ф-ия по нахождению седловых точек. Для начала необходимо определить переменую index равную 0 (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> index=0</span></font>).
+Эта переменная будет хранить номер столбца&nbsp; маскимального
+элемента. Далее будем находить максимальную точку в строке. Определим
+переменную max равную mass[i][0], 1-му элементу в i-строке. Далее
+определим цикл for для вычисления номера солбца в некоторой строке.
+Условная конструкция if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&lt;min)</span></font>) будет проверять элементы строки на min. Если элемент больше min, где переменную min (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> min=mass[i][0]</span></font>)
+мы определли первым элементом, то в переменную index сохроняется номер
+столбца максимального элемента. и переменной max присваиваем зачение
+большей переменной (<font size="-1"><span style="font-family: Courier New;">index=j</span></font>).
+Как только цикл закончился то мы нашли максимальный элемент в строке и
+зафиксировали номер столбца этого элемента. теперь мы будем находить
+минимальный элемент в этом столбце. Но для начала определим цикл (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)</span></font>)
+и произведем проверку if (), на тот случай если в строке несколько
+одинаковых минимальных элементов. После чего определим переменную max и
+присвоем ей значение первого элемента столбца в котором мы нашли
+максимальный элемент (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">int</span> max=mass[0][index];</span></font>). Далее определим цикл&nbsp; for (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)</span></font>) для вычисления номера строки фиксированого столбца. И опять создадим условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"> <span style="color: rgb(51, 51, 255);">if </span>(mass[k][index]&gt;max)</span></font>)
+которой будем проверять на максимум все элементы солбца. В теле условной
+конструкции мы переменной max присвоим значение минимального элемента
+столбца (<font size="-1"><span style="font-family: Courier New;">max=mass[k][index]</span></font>) и переменной stroka присвоим номер строки в которой найден минимальный элемент (<font size="-1"><span style="font-family: Courier New;">stroka=j</span></font>). После выхода из цикла мы определили минимальный элемент в фиксированой строке. Теперь определим условную конструкцию if (<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);">if</span> (max==min)</span></font>)
+и проверим максимальный и минимальный элементы. Это сделано на тот случай если в строке окажется
+несколько одинаковых элементов совпадающих по значению максимальных
+элементов в i строке. Если эти два критерия совпали то "флагу"
+присваиваем значение true (<font size="-1"><span style="font-family: Courier New;">flag=<span style="color: rgb(51, 51, 255);">true</span></span></font>)
+, и&nbsp; на экран выводится сообщение о том что седловая точка найдена
+и выведем на экран координаты этой точки.&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp;
+<h3><font face="Verdana">Текст программы с комментариями</font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(51, 51, 255);"># include</span> <span style="color: rgb(153, 0, 0);">&lt;iostream&gt;</span><br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);"># include</span> <span style="color: rgb(153, 0, 0);">&lt;time.h&gt;</span><br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);">using namespace</span> std;<br>
+
+
+
+
+<br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);">class</span> int_mass<br>
+
+
+
+
+{<br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);">public:</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);"></span> inpt_mass (<span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// формирование массива вводом чисел с клавиатуры</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);"></span> inpt_mass (<span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// формирование массива при помощи ГСЧ </span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> output_mass (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// метод по выводу сформульрованого массива на экран</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> outut_negativ (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span>; <span style="color: rgb(0, 102, 0);">// метод по выводу сначала всех отрицательных элементов, потом всех остальных;</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> sum_mass (<span style="color: rgb(51, 51, 255);">int</span> n); <span style="color: rgb(0, 102, 0);">// вычисление значения суммы элементов в тех строках, которые содержат хотя бы один отрицательный элемент</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">void</span> saddle (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">int</span> i, <span style="color: rgb(51, 51, 255);">bool</span> &amp;flag); <span style="color: rgb(0, 102, 0);">// нахождение седловых точек</span><br>
+
+
+
+
+<span style="color: rgb(51, 51, 255);">private:</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> mass[10][10]; <span style="color: rgb(0, 102, 0);">// заданый массив</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> min; <span style="color: rgb(0, 102, 0);">// минимальное число в массиве сформированого при помощи ГСЧ</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> max; <span style="color: rgb(0, 102, 0);">// максимальное число в массиве сформированого при помощи ГСЧ</span><br>
+
+
+
+
+};<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::inpt_1_mass(<span style="color: rgb(51, 51, 255);">int</span> n)<br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt;
+<span style="color: rgb(153, 0, 0);">" Введите A "</span> &lt;&lt; i+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">','</span> &lt;&lt; j+1 &lt;&lt;<span style="color: rgb(153, 0, 0);"> ": "</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cin &gt;&gt; mass[i][j];<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::inpt_2_mass (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">// конструктор создающий массив при помощи ГСЧ в заданом деопазоне</span><br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите min значение: "</span>; <span style="color: rgb(0, 102, 0);">// ввод минимального числа в массиве</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; min;<br>
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите max значение: "</span>; <span style="color: rgb(0, 102, 0);">// ввод максимального числа в массиве</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; max;<br>
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; srand (( <span style="color: rgb(51, 51, 255);">unsigned</span>) time(NULL)); <span style="color: rgb(0, 102, 0);">// определение ГСЧ</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; mass[i][j]=rand()%(max-min+1)+min; <span style="color: rgb(0, 102, 0);">// формирование числа</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::output_mass (int n) <span style="color: rgb(51, 51, 255);">const</span> <span style="color: rgb(0, 102, 0);">// вывод сформульрованого массива на экран</span><br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp;&nbsp;&nbsp; "</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::outut_negativ (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(51, 51, 255);">const</span> <span style="color: rgb(0, 102, 0);">// метод по выводу сначала всех отрицательных элементов, потом всех остальных;</span><br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"Ввывод массива где сначала идут
+отрицательные, а затем положительные элименты: "</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"________________________"</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int </span>i=0; i&lt;n; i++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// вывод отрицательных чисел</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if </span>(mass[i][j]&lt;0)//<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp; ||&nbsp;
+"</span>; <span style="color: rgb(0, 102, 0);">// вывод отрицательных чисел в строке</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">//вывод положительных чисел</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&gt;=0)//<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; mass[i][j] &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp; ||&nbsp;
+"</span>; <span style="color: rgb(0, 102, 0);">// вывод положительных чисел в строке</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"________________________"</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::sum_mass (<span style="color: rgb(51, 51, 255);">int</span> n) <span style="color: rgb(0, 102, 0);">//вычисление значения суммы элементов в
+тех строках, которые содержат хотя бы один отрицательный эл</span><br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Вычисление суммы в тех строках в
+которых есть хотя бы один отрицательный элемент "</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"№ стр|| сумма"</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> i=0; i&lt;n; i++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> summ=0;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&lt;0)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; summ+=mass[i][k]; </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">//вычисление значения суммы элементов</span></span></font><br>
+
+
+
+<font size="-1"><span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">break</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp; "</span> &lt;&lt; i+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">"&nbsp; || "</span> &lt;&lt; summ &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+void</span> int_mass::saddle (<span style="color: rgb(51, 51, 255);">int</span> n, <span style="color: rgb(51, 51, 255);">int</span> i, <span style="color: rgb(51, 51, 255);">bool</span> &amp;flag) <span style="color: rgb(0, 102, 0);">// вычисление седловых точек</span><br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> index=0; <span style="color: rgb(0, 102, 0);">// переменная хранящая номер столбца максимального элемента</span><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// нахождение максимальной точки в строке</span><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> min=mass[i][0]; <span style="color: rgb(0, 102, 0);">// переменная хоанящая значение max элемента в i строке</span><br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (mass[i][j]&lt;min) <span style="color: rgb(0, 102, 0);">// проверка элемента строки на максимум</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index=j; <span style="color: rgb(0, 102, 0);">// сохранения номера столбца максимального элемента</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; min=mass[i][j]; <span style="color: rgb(0, 102, 0);">// присвоение значения максимального элемента в строке</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> j=0; j&lt;n; j++)<br>
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (min==mass[i][j])<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> max=mass[0][j]; <span style="color: rgb(0, 102, 0);">// переменная хранящая минимальное значение в j строке</span><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for </span>(<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if </span>(mass[k][j]&gt;max) <span style="color: rgb(0, 102, 0);">// проверка элемента строки на минимум</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+max=mass[k][j]; <span style="color: rgb(0, 102, 0);">// присвоение значение минимального&nbsp; элемента в столбце</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">if</span> (max==min) <span style="color: rgb(0, 102, 0);">// если элеенты максимума и минимума</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Седловая точка с координатами ["</span> &lt;&lt; i+1&lt;&lt; <span style="color: rgb(153, 0, 0);">", "</span> &lt;&lt; j+1 &lt;&lt; <span style="color: rgb(153, 0, 0);">"]"</span> &lt;&lt; endl;<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flag=<span style="color: rgb(51, 51, 255);">true</span>;<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+
+&nbsp;&nbsp;&nbsp; }<span style="color: rgb(51, 51, 255);"></span><br>
+
+
+
+
+}<br>
+
+
+
+
+<br>
+
+
+
+<span style="color: rgb(51, 51, 255);">
+int</span> main ()<br>
+
+
+
+
+{<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> n;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Введите размер массива: "</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cin &gt;&gt; n;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">bool</span> flag;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// 1 задание ввод данных с клавиатуры</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; int_mass M1;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M1.inpt_1_mass (n);<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сформированый массив: \n"</span>;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M1.output_mass (n); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// метод по выводу сформульрованого при помощи ГСЧ массива на экран</span></span></font><br>
+
+
+
+<font size="-1"><span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M1.outut_negativ (n); </span></font><font size="-1"><span style="font-family: Courier New;"><span style="color: rgb(0, 102, 0);">// метод по
+выводу сначала всех отрицательных элементов, потом всех остальных</span></span></font><br>
+
+
+
+<font size="-1"><span style="font-family: Courier New;">
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M1.sum_mass (n); <span style="color: rgb(0, 102, 0);">// вычисление
+значения суммы элементов в тех строках, которые содержат хотя бы один
+отрицательный элемент </span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; flag=<span style="color: rgb(51, 51, 255);">false</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">for</span> (<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> i=k;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M1.saddle (n,i, flag); <span style="color: rgb(0, 102, 0);">// нахождение седловых точек</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (flag==<span style="color: rgb(51, 51, 255);">false</span>)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Седловых точек нет !!!"</span>;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(0, 102, 0);">// 2 задание для ГСЧ</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Формирование массива при помощи ГСЧ "</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; int_mass M2;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M2.inpt_2_mass (n); <span style="color: rgb(0, 102, 0);">// формирование массива при помощи ГСЧ.</span><br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Сформированый при помощи ГСЧ массив: \n"</span> &lt;&lt; endl;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M2.output_mass (n); <span style="color: rgb(0, 102, 0);">// метод по выводу сформульрованого при помощи ГСЧ массива на экран </span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M2.outut_negativ (n); <span style="color: rgb(0, 102, 0);">// метод по
+выводу сначала всех отрицательных элементов, потом всех остальных</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M2.sum_mass (n); <span style="color: rgb(0, 102, 0);">// вычисление
+значения суммы элементов в тех строках, которые содержат хотя бы один
+отрицательный элемент</span><br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; flag=<span style="color: rgb(51, 51, 255);">false</span>;<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<span style="color: rgb(51, 51, 255);"> for </span>(<span style="color: rgb(51, 51, 255);">int</span> k=0; k&lt;n; k++)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">int</span> i=k;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; M2.saddle (n,i, flag); <span style="color: rgb(0, 102, 0);">// нахождение седловых точек</span><br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (flag==<span style="color: rgb(51, 51, 255);">false</span>)<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; cout &lt;&lt; <span style="color: rgb(153, 0, 0);">" Седловых точек нет !!!"</span> &lt;&lt; endl;<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; }<br>
+
+
+
+
+<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; system (<span style="color: rgb(153, 0, 0);">"pause"</span>);<br>
+
+
+
+
+&nbsp;&nbsp;&nbsp; <span style="color: rgb(51, 51, 255);">return</span> 0;<br>
+
+
+
+
+}</span></font><font size="-1"><span style="font-family: Courier New;"><br>
+
+
+
+
+
+
+
+
+
+
+</span></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+<font face="Verdana"><i><i>Откомпилированный файл может быть  <a href="task1.exe" target="blank">получен по ссылке</a>
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3><font face="Verdana"><i><i>Тесты и анализ результатов</i></i></font></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4><font face="Verdana"><i><i>Тест 1</i></i></font></h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p style="width: 1195px;"><font face="Verdana"><i><i>При вводе размерности массива 2; Вводе строк 1) строка 1 и 2; 2) строка 3 и 4; И значении min=-56 и max=56<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font face="Verdana"><i><i>Результат работы программы представлен на рисунке ниже</i></i></font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><img src="task_1_img_01.jpg"></i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><font face="Verdana"><i><i><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</i></i></font></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

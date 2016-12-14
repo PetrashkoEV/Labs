@@ -260,9 +260,6 @@
     <Content Include="Includes\task_8\task_1_img_03.jpg" />
     <Content Include="Includes\task_8\task_1_img_04.jpg" />
     <Content Include="Includes\task_8\task_1_img_05.jpg" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux.sln" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\main.cpp" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\main.exe" />
     <Content Include="Includes\task_9\index.html" />
     <Content Include="Includes\task_9\task1.cpp" />
     <Content Include="Includes\task_9\task1.exe" />
@@ -285,13 +282,6 @@
     <Content Include="Includes\task_6\block-shema-2.doc" />
     <Content Include="Includes\task_7\block-shema-1.doc" />
     <Content Include="Includes\task_7\block-shema-2.doc" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\LINUX.userprefs" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\LINUX.usertasks" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\bin\Debug\linux" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\bin\Debug\main.d" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\bin\Debug\main.o" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\LINUX.cproj" />
-    <Content Include="Includes\task_8\Под ЛИНУКС\linux\linux\LINUX.pidb" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
